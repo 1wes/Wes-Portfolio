@@ -19,11 +19,27 @@ git clone https://github.com/1wes/Wes-Portfolio.git
 cd Wes-Portfolio
 ```
 
-### 3. Install the necessary dependancies
+## 3. Install the necessary dependancies
 
 ```
 
 npm install
 ```
 
+## 4. Start the app
+
+### Once all the necessary dependancies are installed, start the app using the following command:
+
+```
+npm start
+```
+
+### This command will start the development server
+
+### Once the server starts completely, head over to the browser. The app will be open on:
+
+```
+
+localhost:3000
+```
 
