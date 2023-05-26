@@ -6,10 +6,52 @@ nav{
     color: rgb(218,218,218);
 }
 
+nav div:first-child::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    margin-top: 12px;
+    left: 0;
+    background-color: rgb(228,170,72);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav div:first-child:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav div:nth-child(2) ul li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    margin-top: 39px;
+    left: 0;
+    background-color: rgb(228,170,72);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav div:nth-child(2) ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .logo{
-    width: 10%;
+    width: 5%;
     font-size: 30px;
     font-weight:bold;
+    padding: 0 5px;
+    position: relative;
+}
+
+.logo:hover{
+    cursor: pointer;
 }
 
 .logo p{
@@ -25,7 +67,7 @@ nav{
 
 .nav-menu-content{
     display: flex;
-    width: 90%;
+    width: 95%;
     justify-content: flex-end;
     padding: 20px 0;
     font-weight: medium;
@@ -40,9 +82,13 @@ nav{
     font-weight: 600;
 }
 
-.nav-menu-content ul li:nth-child(4){
+.nav-menu-content ul li{
+    cursor: pointer;
+    position: relative;
+}
+.nav-menu-content ul li:nth-child(5){
     border-right:2px solid rgb(115,115,119);
-    padding-right: 20px;
+    cursor:auto;
 }
 
 .nav-menu-content ul li:not(:last-child){
