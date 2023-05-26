@@ -23,6 +23,7 @@ let Navbar=()=>{
                             </i>
                         </li>
                         <li>Contact</li>
+                        <li></li>
                         <li>
                             <i>
                                 <FaGithub/>
