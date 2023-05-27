@@ -88,6 +88,11 @@ nav div:nth-child(2) ul li:hover::after{
     cursor: pointer;
     position: relative;
 }
+
+.nav-menu-content ul li i{
+    color: rgb(218,218,218);
+}
+
 .nav-menu-content ul li:nth-child(5){
     border-right:2px solid rgb(115,115,119);
     cursor:auto;
