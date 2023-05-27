@@ -1,0 +1,105 @@
+.intro-section{
+    margin-top: 150px;
+    background-image: url('../person.8f814752.png');
+    background-repeat: no-repeat;
+    background-position-x: 42%;
+    background-position-y: 0%;
+    height: 100vh;
+    display: flex;
+    width: 100%;
+}
+
+.left-sticky-panel{
+    width: 15%;
+    position: sticky;
+    left: 0;
+}
+
+.right-sticky-panel{
+    width: 15%;
+    position: sticky;
+    right: 0;
+}
+
+.intro-content-section{
+    width: 70%;
+    display: flex;
+}
+
+.dev-name{
+    width: 65%;
+    margin-left: 10px;
+}
+
+.dev-name p{
+    display: flex;
+    flex-direction: column;
+    color: rgb(218,218,218);
+    font-size: 50px;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: bold;
+}
+
+.dev-name p span:first-child span:first-child, .dev-name p span:nth-child(2) span:first-child{
+    font-size: 53px;
+}
+
+.dev-name p span:nth-child(2) span:nth-child(2){
+    color: rgb(228,170,72);
+}
+
+.description{
+    width: 35%;
+}
+
+.divider{
+    background-color:rgb(228,170,72);
+    height: 2.5px;
+    margin: 40px 0 0 0px;
+    width: 6%;
+}
+
+.socials{
+    margin-top: 20px;
+    display: flex;
+}
+
+.socials li{
+    list-style: none;
+    margin-right: 10px;
+    font-weight: bold;
+    color: rgb(218,218,218);
+    border-right: 10px;
+    transition: all .1s ease;
+}
+
+.socials li:hover{
+    color: rgb(228,170,72);
+    cursor: pointer;
+}
+
+.socials li:not(:last-child){
+    border-right: 2px solid grey;
+    padding-right: 10px;
+}
+
+.cta-btn{
+    margin-top: 40px;
+}
+
+.cta-btn button{
+    color: rgb(228,170,72);
+    border: 2px solid rgb(228,170,72);;
+    padding: 15px 20px;
+    font-weight: bold;  
+    background: none;
+    font-size: 15px;
+    transition: all .1s ease;
+}
+
+.cta-btn button:hover{
+    background-color: rgb(228,170,72);
+    color: black;
+    cursor: pointer;
+}
