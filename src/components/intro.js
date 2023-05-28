@@ -1,5 +1,7 @@
 import React from "react";
 import './intro.css';
+import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 let StickyLeftSection=()=>{
 
@@ -60,7 +62,21 @@ let MyDescription=()=>{
 
         <React.Fragment>
             <div className="description">
-                Description
+                <p>
+                    INTRODUCTION
+                </p>
+                <p>
+                    Full-Stack Web Developer
+                </p>
+
+                <p>
+                    Lorem ipsum dolor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupida non proident, sunt in culpa qui officia
+                </p>
+
+                <div className="learn-more">
+                        <span><p>Learn more  <FontAwesomeIcon icon={faArrowDownLong} /> </p> </span>   
+                </div>
             </div>
         </React.Fragment>
     )

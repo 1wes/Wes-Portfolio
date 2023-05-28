@@ -103,3 +103,31 @@
     color: black;
     cursor: pointer;
 }
+
+.description p{
+    margin: 0 !important;
+    color: rgb(218,218,218);
+}
+
+.description p:first-child{
+    padding: 0 !important;
+    font-size: 14px;
+    color: rgb(228,170,72);
+    font-weight: 560;
+    margin-bottom: 20px;
+}
+
+.description :nth-child(2){
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.description p:nth-child(3){
+    padding-top: 20px;
+    line-height: 25px;
+}
+
+.learn-more{
+    margin-top: 20px;
+}
