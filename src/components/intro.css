@@ -34,7 +34,7 @@
 .dev-name p{
     display: flex;
     flex-direction: column;
-    color: rgb(218,218,218);
+    color: var(--main-color);
     font-size: 50px;
     margin: 0 !important;
     padding: 0 !important;
@@ -46,7 +46,7 @@
 }
 
 .dev-name p span:nth-child(2) span:nth-child(2){
-    color: rgb(228,170,72);
+    color: var(--accent-color);
 }
 
 .description{
@@ -54,7 +54,7 @@
 }
 
 .divider{
-    background-color:rgb(228,170,72);
+    background-color:var(--accent-color);
     height: 2.5px;
     margin: 40px 0 0 0px;
     width: 6%;
@@ -69,13 +69,13 @@
     list-style: none;
     margin-right: 10px;
     font-weight: bold;
-    color: rgb(218,218,218);
+    color: var(--main-color);
     border-right: 10px;
     transition: all .1s ease;
 }
 
 .socials li:hover{
-    color: rgb(228,170,72);
+    color: var(--accent-color);
     cursor: pointer;
 }
 
@@ -89,8 +89,8 @@
 }
 
 .cta-btn button{
-    color: rgb(228,170,72);
-    border: 2px solid rgb(228,170,72);;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
     padding: 15px 20px;
     font-weight: bold;  
     background: none;
@@ -99,20 +99,20 @@
 }
 
 .cta-btn button:hover{
-    background-color: rgb(228,170,72);
+    background-color: var(--accent-color);
     color: black;
     cursor: pointer;
 }
 
 .description p{
     margin: 0 !important;
-    color: rgb(218,218,218);
+    color: var(--main-color);
 }
 
 .description p:first-child{
     padding: 0 !important;
     font-size: 14px;
-    color: rgb(228,170,72);
+    color: var(--accent-color);
     font-weight: 560;
     margin-bottom: 20px;
 }
@@ -138,21 +138,7 @@
 }
 
 .learn-more::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
     margin-top: 5px;
-    left: 0;
-    background-color: rgb(228,170,72);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.learn-more:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
 }
 
 .learn-more-icon{
