@@ -121,6 +121,7 @@
     font-size: 30px;
     font-weight: 600;
     padding-top: 20px;
+    line-height: 45px;
 }
 
 .description p:nth-child(3){
@@ -130,4 +131,52 @@
 
 .learn-more{
     margin-top: 20px;
+    width: 26%;
+    position: relative;
+    padding-bottom: 5px;
+    cursor: pointer;
 }
+
+.learn-more::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    margin-top: 5px;
+    left: 0;
+    background-color: rgb(228,170,72);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.learn-more:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.learn-more-icon{
+    padding-left: 10px;
+}
+
+.carousel-counter{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 130px;
+    padding: 0 !important;
+    align-items: center ;
+    color: rgb(149,149,149);
+}
+
+.carousel-counter i{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.carousel-counter span:nth-child(2){
+    font-size: medium;
+    line-height: 0;
+    padding-top: 0 !important;
+    margin: -3px 15px 0 15px;
+}
+
