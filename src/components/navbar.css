@@ -2,13 +2,13 @@ nav{
     display: flex;
     width: 100%;
     align-items: center;
-    color: rgb(218,218,218);
+    color: var(--main-color);
     margin: 0 auto !important;
     width: 70%;
     padding-top: 40px;
 }
 
-nav div:first-child::after{
+nav div:first-child::after, nav div:nth-child(2) ul li::after, .learn-more::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -16,32 +16,18 @@ nav div:first-child::after{
     height: 2px;
     margin-top: 12px;
     left: 0;
-    background-color: rgb(228,170,72);
+    background-color: var(--accent-color);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
 
-nav div:first-child:hover::after{
+nav div:first-child:hover::after, nav div:nth-child(2) ul li:hover::after, .learn-more:hover::after{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
 nav div:nth-child(2) ul li::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
     margin-top: 39px;
-    left: 0;
-    background-color: rgb(228,170,72);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-nav div:nth-child(2) ul li:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
 }
 
 .logo{
@@ -64,7 +50,7 @@ nav div:nth-child(2) ul li:hover::after{
 }
 
 .logo p span:last-child{
-    color: rgb(228,170,72);
+    color: var(--accent-color);
 }
 
 .nav-menu-content{
@@ -90,7 +76,7 @@ nav div:nth-child(2) ul li:hover::after{
 }
 
 .nav-menu-content ul li i{
-    color: rgb(218,218,218);
+    color: var(--main-color);
 }
 
 .nav-menu-content ul li:nth-child(5){
