@@ -45,6 +45,34 @@ let GenericCard=({icon, title, number})=>{
     )
 }
 
+let Numbers=({number, description})=>{
+
+    return(
+        <React.Fragment>
+            <div className='numbers'>
+                <div className='figure'>
+                    {number}
+                </div>
+                <div className='figure-description'>
+                    {description}
+                </div>
+            </div>
+        </React.Fragment>
+    )
+}
+
+let Analytics=({children})=>{
+
+    return(
+
+        <React.Fragment>
+            <div className='analytics-section'>
+                {children}
+            </div>
+        </React.Fragment>
+    )
+}
+
 let CardSection=({children})=>{
 
     return(
@@ -72,6 +100,12 @@ let ServicesSection=()=>{
                         <GenericCard icon={<FaDesktop/>} title={`Desktop Applications`} number={2} />
                         <GenericCard icon={<BsGraphUpArrow/>} title={`S.E.O`} number={4} />
                     </CardSection>
+                    <Analytics>
+                        <Numbers number={`4 +`} description={`Years of Experience`} />
+                        <Numbers number={`10 +`} description={`Satisfied Customers`} />
+                        <Numbers number={`8 +`} description={`Projects Completed`} />
+                        <Numbers number={`10 +`} description={`Clients Served`} />
+                    </Analytics>
                 </div>
             </div>
         </React.Fragment>

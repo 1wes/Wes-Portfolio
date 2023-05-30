@@ -1,6 +1,6 @@
 .services-section{
     background-color: var(--services-color);
-    height: 100vh;
+    height: 100%;
 }
 
 .services-content{
@@ -31,13 +31,13 @@
     line-height: 22px;
 }
 
-.card-section{
-    margin-top: 40px;
+.card-section, .analytics-section{
+    margin: 70px 0 50px 0;
     display: flex;
     width: 100%;
 }
 
-.card{
+.card, .numbers{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -53,11 +53,11 @@
     cursor: pointer;
 }
 
-.card:first-child{
+.card:first-child, .numbers:first-child{
     margin-left: 10px !important;
 }
 
-.card:not(:last-child){
+.card:not(:last-child), .numbers:not(:last-child){
     margin: 0 30px 0 0;
 }
 
@@ -69,4 +69,20 @@
     margin: 10px 1px 20px 1px;
     font-size: 25px;
     font-weight: 400;
+}
+
+.analytics-section{
+    margin-top: -1px;
+    padding-bottom: 110px;
+}
+
+.numbers{
+    background: none;
+    height: 100%;
+}
+
+.figure{
+    font-size: 35px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
 }
