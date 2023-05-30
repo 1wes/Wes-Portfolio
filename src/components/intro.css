@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-position-x: 42%;
     background-position-y: 0%;
-    height: 100vh;
+    height: 76vh;
     display: flex;
     width: 100%;
 }
@@ -106,7 +106,7 @@
     margin: 0 !important;
 }
 
-.description p:first-child{
+.description p:first-child, .services-header{
     padding: 0 !important;
     font-size: 14px;
     color: var(--accent-color);
@@ -114,7 +114,7 @@
     margin-bottom: 20px;
 }
 
-.description :nth-child(2){
+.description :nth-child(2), .services-punchline{
     font-size: 30px;
     font-weight: 600;
     padding-top: 20px;
