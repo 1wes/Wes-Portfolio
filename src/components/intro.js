@@ -62,7 +62,7 @@ let MyDescription=()=>{
 
         <React.Fragment>
             <div className="description">
-                <p>
+                <p className="intro-header">
                     INTRODUCTION
                 </p>
                 <p>
@@ -76,7 +76,7 @@ let MyDescription=()=>{
                 </p>
 
                 <div className="learn-more">
-                        <span><p>Learn more  <span className="learn-more-icon"><FontAwesomeIcon icon={faArrowDown}/></span></p> </span>   
+                        <span><p className="learn-more-text">Learn more  <span className="learn-more-icon"><FontAwesomeIcon icon={faArrowDown}/></span></p> </span>   
                 </div>
 
                 <div className="carousel-counter">
