@@ -2,7 +2,6 @@ nav{
     display: flex;
     width: 100%;
     align-items: center;
-    color: var(--main-color);
     margin: 0 auto !important;
     width: 70%;
     padding-top: 40px;

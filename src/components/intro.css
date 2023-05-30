@@ -34,7 +34,6 @@
 .dev-name p{
     display: flex;
     flex-direction: column;
-    color: var(--main-color);
     font-size: 50px;
     margin: 0 !important;
     padding: 0 !important;
@@ -69,7 +68,6 @@
     list-style: none;
     margin-right: 10px;
     font-weight: bold;
-    color: var(--main-color);
     border-right: 10px;
     transition: all .1s ease;
 }
@@ -106,7 +104,6 @@
 
 .description p{
     margin: 0 !important;
-    color: var(--main-color);
 }
 
 .description p:first-child{
