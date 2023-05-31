@@ -74,12 +74,12 @@ let Analytics=({children})=>{
     )
 }
 
-let CardSection=({children})=>{
+let CardSection=({children, id})=>{
 
     return(
 
         <React.Fragment>
-            <div className='card-section'>
+            <div className='card-section' id={id}>
                 {children}
             </div>
         </React.Fragment>
