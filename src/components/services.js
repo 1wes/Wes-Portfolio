@@ -86,7 +86,6 @@ let CardSection=({children})=>{
     )
 }
 
-
 let ServicesSection=()=>{
 
     let [years, setYears]=useState(0);
@@ -183,4 +182,10 @@ let ServicesSection=()=>{
         </React.Fragment>
     )
 }
+
+export{
+    CardSection
+}
+
 export default ServicesSection;
+
