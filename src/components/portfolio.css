@@ -36,7 +36,12 @@
 .portfolio-cards{
     height: 50vh;
     width: 33.33%;
-    /* background-color: yellow; */
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.portfolio-cards:hover{
+    box-shadow: 5px 10px 8px 4px rgba(0, 0, 0, 0.4);
 }
 
 .card-row .portfolio-cards:first-child{
@@ -61,12 +66,20 @@
 
 .portfolio-image{
     height: 80%;
+    overflow: hidden;
 }
 
 .portfolio-image img{
     height: 100%;
     width: 100%;
     object-fit:cover;
+    filter: grayscale(100%) brightness(50%);
+    transition:all .3s ease-in-out;
+}
+
+.portfolio-image img:hover{
+    transform: scale(1.5);
+    filter: grayscale(0) brightness(100%);
 }
 
 .project-details{
