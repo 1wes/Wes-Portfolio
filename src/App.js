@@ -4,20 +4,17 @@ import IntroSection from './components/intro';
 import './App.css';
 import ServicesSection from './components/services';
 
-class App extends React.Component{
+let App=()=>{
 
-  render(){
-
-    return(
-      <React.Fragment>
-        <div className='app'>
-          <Navbar/>
-          <IntroSection/>
-          <ServicesSection/>
-        </div>
-      </React.Fragment>
-    )
-  }
+  return(
+    <React.Fragment>
+      <div className='app'>
+        <Navbar/>
+        <IntroSection/>
+        <ServicesSection/>
+      </div>
+    </React.Fragment>
+  )
 }
 
 export default App;
