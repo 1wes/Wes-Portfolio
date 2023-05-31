@@ -1,4 +1,4 @@
-import React from 'react';
+import  React, { useEffect, useRef, useState } from 'react';
 import './services.css';
 import { FiPenTool } from 'react-icons/fi';
 import { GoCode } from 'react-icons/go';
@@ -8,6 +8,7 @@ import { BsGraphUpArrow } from 'react-icons/bs';
 let ServicesDescription=()=>{
 
     return(
+
         <React.Fragment>
             <div className='services-description'>
                 <p className='services-header'>SERVICES</p>
@@ -51,7 +52,7 @@ let Numbers=({number, description})=>{
         <React.Fragment>
             <div className='numbers'>
                 <div className='figure'>
-                    {number}
+                    <span className='analytics-figure'>{number}</span> +
                 </div>
                 <div className='figure-description'>
                     {description}
@@ -88,10 +89,83 @@ let CardSection=({children})=>{
 
 let ServicesSection=()=>{
 
+    let [years, setYears]=useState(0);
+    let [customers, setCustomers]=useState(0);
+    let [projects, setProjects]=useState(0);
+    let [clients, setClients]=useState(0);
+    let [status, setStatus]=useState(false);
+    let intervalId=useRef();
+
+
+
+    useEffect(()=>{
+
+        if(status){
+
+            for(years; years<6; years++){
+                intervalId.current=setInterval(() => {
+                    setYears(years=>(years+1));
+                }, 50);
+
+                return ()=>{
+                    clearInterval(intervalId.current)
+                }
+            }
+
+            for(customers; customers<50; customers++){
+                intervalId.current=setInterval(() => {
+                    setCustomers(customers=>(customers+1));
+                }, 20);
+
+                return ()=>{
+                    clearInterval(intervalId.current)
+                }
+            }
+
+            for(projects; projects<12; projects++){
+                intervalId.current=setInterval(() => {
+                    setProjects(projects=>(projects+1));
+                }, 50);
+
+                return ()=>{
+                    clearInterval(intervalId.current)
+                }
+            }
+
+            for(clients; clients<10; clients++){
+                intervalId.current=setInterval(() => {
+                    setClients(clients=>(clients+1));
+                }, 50);
+
+                return ()=>{
+                    clearInterval(intervalId.current)
+                }
+            }
+        }
+
+    },[status, years, customers, projects, clients]);
+    
+    const changeStatus=()=>{
+
+        setStatus(true);
+    }
+
+    const stopCounter=()=>{
+        
+        setStatus(false);
+
+        clearInterval(intervalId.current);
+
+        setYears(0);
+        setProjects(0);
+        setCustomers(0);
+        setClients(0);
+    }
+
     return(
 
         <React.Fragment>
-            <div className='services-section'>
+            <div className='services-section' onMouseEnter={changeStatus} onMouseLeave={stopCounter} >
                 <div className='services-content'>
                     <ServicesDescription/>
                     <CardSection>
@@ -101,10 +175,10 @@ let ServicesSection=()=>{
                         <GenericCard icon={<BsGraphUpArrow/>} title={`S.E.O`} number={4} />
                     </CardSection>
                     <Analytics>
-                        <Numbers number={`4 +`} description={`Years of Experience`} />
-                        <Numbers number={`10 +`} description={`Satisfied Customers`} />
-                        <Numbers number={`8 +`} description={`Projects Completed`} />
-                        <Numbers number={`10 +`} description={`Clients Served`} />
+                        <Numbers number={years} description={`Years of Experience`} />
+                        <Numbers number={customers} description={`Satisfied Customers`} />
+                        <Numbers number={projects} description={`Projects Completed`} />
+                        <Numbers number={clients} description={`Clients Served`} />
                     </Analytics>
                 </div>
             </div>
