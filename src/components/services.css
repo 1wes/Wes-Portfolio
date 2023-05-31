@@ -3,20 +3,22 @@
     height: 100%;
 }
 
-.services-content{
+.services-content, .portfolio-content{
     display: block;
     padding-top: 100px;
     justify-content: center;
     text-align: center;
 }
 
-.services-description{
+.services-description, .portfolio-description{
     width: 100%;
 }
 
-.services-header, .intro-header{
+.services-header, .intro-header, .portfolio-header{
     color: var(--accent-color);
     letter-spacing: 1.5px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .services-punchline{
@@ -25,7 +27,7 @@
     margin-bottom: 15px;
 }
 
-.services-detail{
+.services-detail, .portfolio-details{
     margin: 0 auto;
     width: 50%;
     line-height: 22px;
