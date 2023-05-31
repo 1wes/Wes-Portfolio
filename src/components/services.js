@@ -96,13 +96,11 @@ let ServicesSection=()=>{
     let [status, setStatus]=useState(false);
     let intervalId=useRef();
 
-
-
     useEffect(()=>{
 
         if(status){
 
-            for(years; years<6; years++){
+            for(years; years<4; years++){
                 intervalId.current=setInterval(() => {
                     setYears(years=>(years+1));
                 }, 50);
@@ -151,7 +149,7 @@ let ServicesSection=()=>{
     }
 
     const stopCounter=()=>{
-        
+
         setStatus(false);
 
         clearInterval(intervalId.current);
@@ -165,8 +163,8 @@ let ServicesSection=()=>{
     return(
 
         <React.Fragment>
-            <div className='services-section' onMouseEnter={changeStatus} onMouseLeave={stopCounter} >
-                <div className='services-content'>
+            <div className='services-section'>
+                <div className='services-content' onMouseEnter={changeStatus} onMouseLeave={stopCounter}>
                     <ServicesDescription/>
                     <CardSection>
                         <GenericCard icon={<FiPenTool/>} title={`UI/UX Design`} number={3}/>
@@ -174,7 +172,7 @@ let ServicesSection=()=>{
                         <GenericCard icon={<FaDesktop/>} title={`Desktop Applications`} number={2} />
                         <GenericCard icon={<BsGraphUpArrow/>} title={`S.E.O`} number={4} />
                     </CardSection>
-                    <Analytics>
+                    <Analytics changeStatus={changeStatus} stopCounter={stopCounter}>
                         <Numbers number={years} description={`Years of Experience`} />
                         <Numbers number={customers} description={`Satisfied Customers`} />
                         <Numbers number={projects} description={`Projects Completed`} />
