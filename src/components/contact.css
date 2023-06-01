@@ -1,5 +1,6 @@
 .contact-section{
     background-color: var(--services-color);
+    border-bottom: 2.5px solid var(--accent-color);
 }
 
 .contact-punchline{
@@ -46,4 +47,32 @@
     font-weight: 500 !important;
     color: var(--accent-color) !important;
     text-decoration: none ;
+}
+
+.go-up-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    margin-top: -30px;
+    padding-bottom: 50px;
+}
+
+.go-up-btn button{
+    color: var(--accent-color);
+    background: none;
+    border: 3px solid var(--accent-color);
+    display: flex;
+    align-items: center;
+    padding: 7px 10px 5px 10px;
+    transition: all .1s ease-in-out;
+}
+
+.go-up-btn button:hover{
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: var(--main-color);
+}
+
+.go-up-btn button i{
+    font-size: 25px;
 }

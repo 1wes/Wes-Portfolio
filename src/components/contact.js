@@ -6,6 +6,7 @@ import { MdMail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaFacebookSquare, FaInstagramSquare, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { GoChevronUp } from "react-icons/go";
 
 let ContactDescription=()=>{
 
@@ -45,6 +46,20 @@ let ContactCard=({contactIcon, contact, address})=>{
     )
 }
 
+let GoUp=()=>{
+
+    return(
+
+        <>
+        <div className="go-up-btn">
+            <button type="button">
+                <i><GoChevronUp/></i>
+            </button>
+        </div>
+        </>
+    )
+}
+
 let Contact=()=>{
 
     return(
@@ -65,6 +80,7 @@ let Contact=()=>{
                         </CardRow>
                     </CardSection>
                 </div>
+                <GoUp/>
             </div>
         </React.Fragment>
     )
