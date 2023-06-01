@@ -3,18 +3,18 @@
     height: 100%;
 }
 
-.services-content, .portfolio-content{
+.services-content, .portfolio-content, .contact-content{
     display: block;
     padding-top: 100px;
     justify-content: center;
     text-align: center;
 }
 
-.services-description, .portfolio-description{
+.services-description, .portfolio-description, .contact-description{
     width: 100%;
 }
 
-.services-header, .intro-header, .portfolio-header{
+.services-header, .intro-header, .portfolio-header, .contact-header{
     color: var(--accent-color);
     letter-spacing: 1.5px;
     font-size: 14px;
@@ -27,7 +27,7 @@
     margin-bottom: 15px;
 }
 
-.services-detail, .portfolio-details{
+.services-detail, .portfolio-details, .contact-detail{
     margin: 0 auto;
     width: 50%;
     line-height: 22px;

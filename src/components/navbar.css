@@ -1,4 +1,4 @@
-nav, .services-content, .portfolio-content{
+nav, .services-content, .portfolio-content, .contact-content{
     display: flex;
     width: 100%;
     align-items: center;
