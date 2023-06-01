@@ -92,4 +92,9 @@ let Portfolios=()=>{
         </React.Fragment>
     )
 }
+
+export{
+    CardRow
+}
+
 export default Portfolios;
