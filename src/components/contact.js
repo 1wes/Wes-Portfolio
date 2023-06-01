@@ -46,13 +46,13 @@ let ContactCard=({contactIcon, contact, address})=>{
     )
 }
 
-let GoUp=()=>{
+let GoUp=({onClick})=>{
 
     return(
 
         <>
         <div className="go-up-btn">
-            <button type="button">
+            <button type="button" onClick={onClick}>
                 <i><GoChevronUp/></i>
             </button>
         </div>
@@ -61,6 +61,11 @@ let GoUp=()=>{
 }
 
 let Contact=()=>{
+
+    const scrollToTop=()=>{
+
+        window.scrollTo({top:0, left:0, behavior:"smooth"});
+    }
 
     return(
         <React.Fragment>
@@ -80,7 +85,7 @@ let Contact=()=>{
                         </CardRow>
                     </CardSection>
                 </div>
-                <GoUp/>
+                <GoUp onClick={scrollToTop} />
             </div>
         </React.Fragment>
     )
