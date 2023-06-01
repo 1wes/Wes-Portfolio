@@ -4,6 +4,8 @@ import { CardSection } from "./services";
 import { CardRow } from "./portfolio";
 import { MdMail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { BsTelephoneFill } from "react-icons/bs";
+import { FaFacebookSquare, FaInstagramSquare, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 let ContactDescription=()=>{
 
@@ -31,9 +33,13 @@ let ContactCard=({contactIcon, contact, address})=>{
             <i>
                 {contactIcon}
             </i>
-            <Link to={contact} className="contact-info" target="blank">
-                {address}
-            </Link>
+
+            <div className="contact-info">
+                <Link to={contact} className="address" target="blank">
+                    {address}
+                </Link>
+            </div>
+
         </div>
         </>
     )
@@ -49,13 +55,13 @@ let Contact=()=>{
                     <CardSection id={`contact-card-section`}>
                         <CardRow>
                             <ContactCard contactIcon={<MdMail/>} contact={`mailto:okemwawes@gmail.com`} address={`okemwawes@gmail.com`} />
-                            {/* <ContactCard/> */}
-                            {/* <ContactCard/> */}
+                            <ContactCard contactIcon={<BsTelephoneFill/>} contact={`tel:+254 7 03 239124`} address={`+254 7 03 239124`} />
+                            <ContactCard contactIcon={<FaTwitter/>} contact={`https://twitter.com/okemwa_wes`} address={`@okemwa_wes`} />
                         </CardRow>
                         <CardRow>
-                            {/* <ContactCard/> */}
-                            {/* <ContactCard/> */}
-                            {/* <ContactCard/> */}
+                            <ContactCard contactIcon={<FaLinkedinIn/>} contact={`https://www.linkedin.com/in/okemwa-wes/`} address={`okemwa-wesley`} />
+                            <ContactCard contactIcon={<FaInstagramSquare/>} contact={`https://z-p15.www.instagram.com/w_es.le_y/`} address={`@w_es.le_y`} />
+                            <ContactCard contactIcon={<FaFacebookSquare/>} contact={`https://web.facebook.com/wes.wesley.794`} address={`okemwa wes`}/>
                         </CardRow>
                     </CardSection>
                 </div>
