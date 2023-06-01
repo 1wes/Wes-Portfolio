@@ -1,0 +1,42 @@
+.contact-section{
+    background-color: var(--services-color);
+}
+
+.contact-punchline{
+    font-size: 40px;
+    margin: 15px;
+    font-weight: 600;
+    margin-top: -5px;
+}
+
+#contact-card-section{
+    display: block;
+}
+
+.contact-card{
+    display: flex;
+    width: 33.33%;
+    background-color: rgb(46,46,53);
+    padding: 15px 0;
+    align-items: center;
+}
+
+.contact-card:first-child{
+    margin-left: 10px;
+}
+
+.contact-card:not(:last-child){
+    margin-right: 30px;
+}
+
+.contact-card i{
+    margin: 0 10px 0 30px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.contact-info{
+    font-weight: 500 !important;
+    color: var(--accent-color) !important;
+    text-decoration: none;
+}
