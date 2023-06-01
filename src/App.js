@@ -5,6 +5,7 @@ import IntroSection from './components/intro';
 import ServicesSection from './components/services';
 import Portfolios from './components/portfolio';
 import Contact from './components/contact';
+import Footer from './components/footer';
 
 let App=()=>{
 
@@ -16,6 +17,7 @@ let App=()=>{
         <ServicesSection/>
         <Portfolios/>
         <Contact/>
+        <Footer/>
       </div>
     </React.Fragment>
   )
