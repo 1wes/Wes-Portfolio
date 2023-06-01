@@ -7,7 +7,7 @@ nav, .services-content, .portfolio-content, .contact-content{
     padding-top: 40px;
 }
 
-nav div:first-child::after, nav div:nth-child(2) ul li::after, .learn-more::after{
+nav div:first-child::after, nav div:nth-child(2) ul li::after, .learn-more::after,.contact-info::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -20,7 +20,7 @@ nav div:first-child::after, nav div:nth-child(2) ul li::after, .learn-more::afte
     transition: transform 0.25s ease-out;
 }
 
-nav div:first-child:hover::after, nav div:nth-child(2) ul li:hover::after, .learn-more:hover::after{
+nav div:first-child:hover::after, nav div:nth-child(2) ul li:hover::after, .learn-more:hover::after, .contact-info:hover::after{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
