@@ -39,6 +39,7 @@ let MyName=()=>{
 
         <React.Fragment>
             <div className="dev-name">
+                <div>Hi <span>👋</span>, I am </div>
                 <p>
                     <span className="last-name"><span>O</span>kemwa</span> <span className="first-name"><span>W</span>esley<span>.</span></span>
                 </p>
