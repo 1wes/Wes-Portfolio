@@ -78,13 +78,13 @@ let Portfolios=()=>{
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
                         <CardRow>
+                            <PortfolioCards src={require('../accuweights.png')} title={`Accuweights`} livelink={`https://www.accuweights.com/`} codebaselink={``}/>
                             <PortfolioCards src={require('../tictactoe.png')} title={`Tic-Tac-Toe`} livelink={`https://1wes.github.io/`} codebaselink={`https://github.com/1wes/1wes.github.io`} />
-                            <PortfolioCards/>
-                            <PortfolioCards/>
+                            <PortfolioCards src={require('../KABU.png')} title={`Shadow KABU student portal`} livelink={``} codebaselink={`https://github.com/1wes/KABU-shadow-student-portal`}/>
                         </CardRow>
                         <CardRow>
-                            <PortfolioCards/>
-                            <PortfolioCards/>
+                            <PortfolioCards title={`Portfolio`} codebaselink={`https://github.com/1wes/Wes-Portfolio`}/>
+                            <PortfolioCards title={`Ziada Lite`} />
                         </CardRow>
                     </CardSection>
                 </div>
