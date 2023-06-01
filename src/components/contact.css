@@ -30,13 +30,20 @@
 }
 
 .contact-card i{
-    margin: 0 10px 0 30px;
+    margin: 0 20px 0 30px;
     font-size: 25px;
     font-weight: 800;
 }
 
 .contact-info{
+    position: relative;
+}
+
+.contact-info::after{
+    margin-top: 22px;
+}
+.address{
     font-weight: 500 !important;
     color: var(--accent-color) !important;
-    text-decoration: none;
+    text-decoration: none ;
 }
