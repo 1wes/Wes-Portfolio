@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import IntroSection from './components/intro';
 import ServicesSection from './components/services';
 import Portfolios from './components/portfolio';
+import Contact from './components/contact';
 
 let App=()=>{
 
@@ -14,6 +15,7 @@ let App=()=>{
         <IntroSection/>
         <ServicesSection/>
         <Portfolios/>
+        <Contact/>
       </div>
     </React.Fragment>
   )
