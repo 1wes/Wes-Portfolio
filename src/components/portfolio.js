@@ -4,6 +4,7 @@ import { CardSection } from "./services";
 import { Link } from "react-router-dom";
 import { FiExternalLink } from "react-icons/fi";
 import { BiCodeAlt } from "react-icons/bi";
+import { Tooltip } from '@mui/material';
 
 let PortfolioDescription=()=>{
 
@@ -50,16 +51,20 @@ let PortfolioCards=({title, src, livelink, codebaselink})=>{
             <div className="project-details">
                 <div className="name">
                     <Link to={livelink} target="blank">
-                        <i>
-                            <FiExternalLink/>
-                        </i>
+                        <Tooltip title={`Check out the site`} arrow placement="top">
+                            <i>
+                                <FiExternalLink/>
+                            </i>
+                        </Tooltip>
                     </Link>
                 </div>
                 <div className="code">
                     <Link to={codebaselink} target="blank">
-                        <i>
-                            <BiCodeAlt/>
-                        </i>
+                        <Tooltip title={`Check out the codebase`} arrow placement="top">
+                            <i>
+                                <BiCodeAlt/>
+                            </i>
+                        </Tooltip>
                     </Link>
                 </div>
             </div>
