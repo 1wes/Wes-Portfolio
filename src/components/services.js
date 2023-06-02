@@ -162,8 +162,8 @@ let ServicesSection=()=>{
     return(
 
         <React.Fragment>
-            <div className='services-section'>
-                <div className='services-content' onMouseEnter={changeStatus} onMouseLeave={stopCounter}>
+            <div className='services-section' onMouseEnter={changeStatus} onMouseLeave={stopCounter}>
+                <div className='services-content'>
                     <ServicesDescription/>
                     <CardSection>
                         <GenericCard icon={<FiPenTool/>} title={`UI/UX Design`} number={3}/>
