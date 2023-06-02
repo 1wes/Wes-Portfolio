@@ -34,7 +34,7 @@ let Socials=()=>{
     )
 }
 
-let MyName=()=>{
+let MyName=({onClick})=>{
 
     return(
 
@@ -51,14 +51,14 @@ let MyName=()=>{
                 <Socials/>
 
                 <div className="cta-btn">
-                    <button type="button" className="contact-btn">CONTACT ME</button>
+                    <button type="button" className="contact-btn" onClick={onClick}>CONTACT ME</button>
                 </div>
             </div>
         </React.Fragment>
     )
 }
 
-let MyDescription=()=>{
+let MyDescription=({onClick})=>{
 
     return(
 
@@ -77,7 +77,7 @@ let MyDescription=()=>{
                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupida non proident, sunt in culpa qui officia
                 </p>
 
-                <div className="learn-more">
+                <div className="learn-more" onClick={onClick}>
                         <span><p className="learn-more-text">Learn more  <span className="learn-more-icon"><FontAwesomeIcon icon={faArrowDown}/></span></p> </span>   
                 </div>
 
@@ -109,14 +109,32 @@ let IntroContentSection=({children})=>{
 
 let IntroSection=()=>{
 
+    const goTocontacts=()=>{
+
+        const contactsSection=document.getElementById('contact-me');
+
+        if(contactsSection){
+            contactsSection.scrollIntoView({behavior:"smooth"})
+        }
+    }
+
+    const goToServices=()=>{
+
+        const servicesSection=document.getElementById('my-services');
+
+        if(servicesSection){
+            servicesSection.scrollIntoView({behavior:'smooth'});
+        }
+    }
+
     return(
 
         <React.Fragment>
             <div className="intro-section">
                 <StickyLeftSection/>
                 <IntroContentSection>
-                    <MyName/>
-                    <MyDescription/>
+                    <MyName onClick={goTocontacts}  />
+                    <MyDescription onClick={goToServices} />
                 </IntroContentSection>
                 <StickyRightSection/>
             </div>
