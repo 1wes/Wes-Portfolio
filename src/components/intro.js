@@ -2,6 +2,7 @@ import React from "react";
 import './intro.css';
 import { faArrowDown, faArrowLeftLong, faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 let StickyLeftSection=()=>{
 
@@ -25,9 +26,9 @@ let Socials=()=>{
 
         <React.Fragment>
             <div className="socials">
-                <li>Medium</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
+                <li><Link to={`https://medium.com/@okemwawes`} className="social" target="blank">Medium</Link></li>
+                <li><Link to={`https://z-p15.www.instagram.com/w_es.le_y/`} className="social" target="blank">Instagram</Link></li>
+                <li><Link to={`https://web.facebook.com/wes.wesley.794`} className="social" target="blank">Facebook</Link></li>
             </div>
         </React.Fragment>
     )
