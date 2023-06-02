@@ -75,16 +75,21 @@
     margin-right: 10px;
     font-weight: bold;
     border-right: 10px;
+}
+
+.social{
+    color: var(--main-color);
+    text-decoration: none;
     transition: all .1s ease;
 }
 
-.socials li:hover{
+.social:hover{
     color: var(--accent-color);
     cursor: pointer;
 }
 
 .socials li:not(:last-child){
-    border-right: 2px solid grey;
+    border-right: 2px solid grey !important;
     padding-right: 10px;
 }
 
