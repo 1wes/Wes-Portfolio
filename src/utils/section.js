@@ -6,5 +6,5 @@ let goToSection=(id=>{
     }
 });
 export{
-    goToSection
+    goToSection 
 }
