@@ -162,7 +162,7 @@ let ServicesSection=()=>{
     return(
 
         <React.Fragment>
-            <div className='services-section' onMouseEnter={changeStatus} onMouseLeave={stopCounter}>
+            <div className='services-section' onMouseEnter={changeStatus} onMouseLeave={stopCounter} id='my-services'>
                 <div className='services-content'>
                     <ServicesDescription/>
                     <CardSection>

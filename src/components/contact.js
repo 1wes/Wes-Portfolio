@@ -63,13 +63,12 @@ let GoUp=({onClick})=>{
 let Contact=()=>{
 
     const scrollToTop=()=>{
-
         window.scrollTo({top:0, left:0, behavior:"smooth"});
     }
 
     return(
         <React.Fragment>
-            <div className="contact-section">
+            <div className="contact-section" id="contact-me">
                 <div className="contact-content">
                     <ContactDescription/>
                     <CardSection id={`contact-card-section`}>

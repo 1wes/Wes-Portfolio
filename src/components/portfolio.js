@@ -78,7 +78,7 @@ let Portfolios=()=>{
     return(
 
         <React.Fragment>
-            <div className="portfolio-section">
+            <div className="portfolio-section" id='my-portfolio'>
                 <div className="portfolio-content">
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
