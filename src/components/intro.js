@@ -3,7 +3,7 @@ import './intro.css';
 import { faArrowDown, faArrowLeftLong, faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { goToSection } from "../utils/util";
+import { goToSection } from "../utils/section";
 
 let StickyLeftSection=()=>{
 
