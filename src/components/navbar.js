@@ -4,8 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
 import {FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { goToSection } from '../utils/section';
 
 let Navbar=()=>{
+
+    const goToPortfolio=()=>{
+        goToSection('my-portfolio');
+    }
+
+    const goToContacts=()=>{
+        goToSection('contact-me')
+    }
 
     return(
 
@@ -17,13 +26,13 @@ let Navbar=()=>{
                 <div className='nav-menu-content'>
                     <ul>
                         <li>Home</li>
-                        <li>Portfolios</li>
+                        <li onClick={goToPortfolio}>Portfolios</li>
                         <li>Blog
                             <i>
                                 <FontAwesomeIcon icon={faArrowDownLong} />
                             </i>
                         </li>
-                        <li>Contact</li>
+                        <li onClick={goToContacts}>Contact</li>
                         <li></li>
                         <li>
                             <Link to={`https://github.com/1wes`} target='blank'>
