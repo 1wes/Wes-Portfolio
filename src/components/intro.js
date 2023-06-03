@@ -3,6 +3,7 @@ import './intro.css';
 import { faArrowDown, faArrowLeftLong, faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { goToSection } from "../utils/util";
 
 let StickyLeftSection=()=>{
 
@@ -110,21 +111,11 @@ let IntroContentSection=({children})=>{
 let IntroSection=()=>{
 
     const goTocontacts=()=>{
-
-        const contactsSection=document.getElementById('contact-me');
-
-        if(contactsSection){
-            contactsSection.scrollIntoView({behavior:"smooth"})
-        }
+        goToSection('contact-me');
     }
 
     const goToServices=()=>{
-
-        const servicesSection=document.getElementById('my-services');
-
-        if(servicesSection){
-            servicesSection.scrollIntoView({behavior:'smooth'});
-        }
+        goToSection('my-services');
     }
 
     return(
