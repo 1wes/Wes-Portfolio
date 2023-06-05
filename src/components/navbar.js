@@ -21,6 +21,9 @@ let Navbar=()=>{
         <React.Fragment>
             <nav className='main-navbar'>
                 <div className='logo'>
+                    <div className='image'>
+                        <img src={require('../wes.png')} alt='logo-image' />
+                    </div>
                     <p><span>O</span><span>W</span><span>.</span> </p>
                 </div>
                 <div className='nav-menu-content'>
