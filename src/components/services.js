@@ -5,22 +5,34 @@ import { GoCode } from 'react-icons/go';
 import { FaDesktop } from 'react-icons/fa';
 import { BsGraphUpArrow } from 'react-icons/bs';
 
-let ServicesDescription=()=>{
+let SectionHeader=({header, tagline})=>{
 
     return(
-
         <React.Fragment>
             <div className='services-description'>
-                <p className='services-header'>MY SERVICES & SKILLSET</p>
+                <p className='services-header'> {header}</p>
 
                 <div className='services-punchline'>
                 </div>
 
                 <div className='services-detail'>
-                    My high adaptability to different user requirements and life-long learning passion has enabled me to gather diverse skills that
-                    enable me to accomplish my work. Here are some of them.
+                    {tagline}
                 </div>
             </div> 
+        </React.Fragment>
+    )
+}
+
+let ServicesDescription=()=>{
+
+    const header=`MY SERVICES & SKILLSET`;
+    const tagline=` My high adaptability to different user requirements and life-long learning passion has enabled me to gather diverse skills that
+    enable me to accomplish my work. Here are some of them.`
+
+    return(
+
+        <React.Fragment>
+            <SectionHeader header={header} tagline={tagline} />
         </React.Fragment>
     )
 }
@@ -183,7 +195,8 @@ let ServicesSection=()=>{
 }
 
 export{
-    CardSection
+    CardSection,
+    SectionHeader
 }
 
 export default ServicesSection;
