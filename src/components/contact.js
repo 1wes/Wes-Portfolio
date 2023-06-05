@@ -19,8 +19,7 @@ let ContactDescription=()=>{
             Get In Touch With Me
         </div>
         <div className="contact-detail">
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-        fugiat nulla pariatur. Excepteur sint occaecat cupida non proident, sunt in culpa qui officia
+            If interested to work with or hire me to work on your initial or next web-based project, reach out to me via the following contacts.
         </div>
         </>
     )
