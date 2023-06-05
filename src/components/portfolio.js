@@ -14,8 +14,7 @@ let PortfolioDescription=()=>{
             <p className="portfolio-header">MY PORTFOLIO</p>
 
             <div className="portfolio-punchline">
-                These Are My Works, So Far . . .
-            </div>
+                </div>
 
             <div className="portfolio-details">
                 Check out some of the projects that I have worked on over the years. 

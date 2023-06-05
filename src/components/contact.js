@@ -16,10 +16,9 @@ let ContactDescription=()=>{
             <p className="contact-header">CONTACT ME</p>
         </div>
         <div className="contact-punchline">
-            Get In Touch With Me
         </div>
         <div className="contact-detail">
-            If interested to work with or hire me to work on your initial or next web-based project, reach out to me via the following contacts.
+            Feel free to reach out to me by filling and submitting the form below and I will get back to you as soon as possible
         </div>
         </>
     )

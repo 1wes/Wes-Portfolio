@@ -14,7 +14,6 @@ let ServicesDescription=()=>{
                 <p className='services-header'>MY SERVICES & SKILLSET</p>
 
                 <div className='services-punchline'>
-                    What I Am Great At..
                 </div>
 
                 <div className='services-detail'>
