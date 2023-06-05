@@ -14,20 +14,28 @@
     width: 100%;
 }
 
-.services-header, .intro-header, .portfolio-header, .contact-header{
+.services-header, .intro-header{
     color: var(--accent-color);
     letter-spacing: 1.5px;
     font-size: 14px;
     font-weight: 500;
 }
 
-.services-punchline{
-    margin-top: -35px;
-    font-size: 40px;
-    margin-bottom: 15px;
+.services-header{
+    margin-bottom: 20px;
 }
 
-.services-detail, .portfolio-details, .contact-detail{
+.header-divider{
+    width:3%;
+    margin: 0 auto;
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    margin-bottom: 20px;
+    height: 5px;
+    border-radius: 20px;
+}
+
+.services-detail{
     margin: 0 auto;
     width: 50%;
     line-height: 22px;
