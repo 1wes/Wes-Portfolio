@@ -11,15 +11,14 @@ let PortfolioDescription=()=>{
     return(
         <>
         <div className="portfolio-description">
-            <p className="portfolio-header">PORTFOLIO</p>
+            <p className="portfolio-header">MY PORTFOLIO</p>
 
             <div className="portfolio-punchline">
                 These Are My Works, So Far . . .
             </div>
 
             <div className="portfolio-details">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-             nulla pariatur. Excepteur sint occaecat cupida non proident, sunt in culpa qui officia
+                Check out some of the projects that I have worked on over the years. 
             </div>
         </div>
         </>
@@ -51,7 +50,7 @@ let PortfolioCards=({title, src, livelink, codebaselink})=>{
             <div className="project-details">
                 <div className="name">
                     <Link to={livelink} target="blank">
-                        <Tooltip title={`Check out the site`} arrow placement="top">
+                        <Tooltip title={`Go to the site`} arrow placement="top">
                             <i>
                                 <FiExternalLink/>
                             </i>
@@ -60,7 +59,7 @@ let PortfolioCards=({title, src, livelink, codebaselink})=>{
                 </div>
                 <div className="code">
                     <Link to={codebaselink} target="blank">
-                        <Tooltip title={`Check out the codebase`} arrow placement="top">
+                        <Tooltip title={`Go to the codebase`} arrow placement="top">
                             <i>
                                 <BiCodeAlt/>
                             </i>
