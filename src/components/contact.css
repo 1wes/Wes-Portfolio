@@ -76,6 +76,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 ::placeholder{
     color:gray;
     font-weight: 600;
