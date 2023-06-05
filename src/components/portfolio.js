@@ -5,21 +5,16 @@ import { Link } from "react-router-dom";
 import { FiExternalLink } from "react-icons/fi";
 import { BiCodeAlt } from "react-icons/bi";
 import { Tooltip } from '@mui/material';
+import { SectionHeader } from "./services";
 
 let PortfolioDescription=()=>{
 
+    const header=`MY PORTFOLIO`;
+    const tagline=`Check out some of the projects that I have worked on over the years.`;
+
     return(
         <>
-        <div className="portfolio-description">
-            <p className="portfolio-header">MY PORTFOLIO</p>
-
-            <div className="portfolio-punchline">
-                </div>
-
-            <div className="portfolio-details">
-                Check out some of the projects that I have worked on over the years. 
-            </div>
-        </div>
+        <SectionHeader header={header} tagline={tagline} />
         </>
     )
 }

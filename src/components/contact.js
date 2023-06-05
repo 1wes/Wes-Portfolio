@@ -7,19 +7,16 @@ import { Link } from "react-router-dom";
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaFacebookSquare, FaInstagramSquare, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { GoChevronUp } from "react-icons/go";
+import { SectionHeader } from "./services";
 
 let ContactDescription=()=>{
 
+    const header=`CONTACT ME`;
+    const tagline=`Feel free to reach out to me by filling and submitting the form below and I will get back to you as soon as possible`;
+
     return(
         <>
-        <div className="contact-description">
-            <p className="contact-header">CONTACT ME</p>
-        </div>
-        <div className="contact-punchline">
-        </div>
-        <div className="contact-detail">
-            Feel free to reach out to me by filling and submitting the form below and I will get back to you as soon as possible
-        </div>
+        <SectionHeader header={header} tagline={tagline} />
         </>
     )
 }
