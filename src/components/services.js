@@ -39,7 +39,7 @@ let GenericCard=({icon, title, number})=>{
                     {title}
                 </div>
                 <div>
-                    {number} projects
+                    {number} project (s)
                 </div>
             </div>
         </React.Fragment>
@@ -99,7 +99,7 @@ let ServicesSection=()=>{
 
         if(status){
 
-            for(years; years<4; years++){
+            for(years; years<3; years++){
                 intervalId.current=setInterval(() => {
                     setYears(years=>(years+1));
                 }, 50);
@@ -109,17 +109,17 @@ let ServicesSection=()=>{
                 }
             }
 
-            for(customers; customers<50; customers++){
+            for(customers; customers<100; customers++){
                 intervalId.current=setInterval(() => {
                     setCustomers(customers=>(customers+1));
-                }, 20);
+                }, 10);
 
                 return ()=>{
                     clearInterval(intervalId.current)
                 }
             }
 
-            for(projects; projects<12; projects++){
+            for(projects; projects<10; projects++){
                 intervalId.current=setInterval(() => {
                     setProjects(projects=>(projects+1));
                 }, 50);
@@ -129,7 +129,7 @@ let ServicesSection=()=>{
                 }
             }
 
-            for(clients; clients<10; clients++){
+            for(clients; clients<5; clients++){
                 intervalId.current=setInterval(() => {
                     setClients(clients=>(clients+1));
                 }, 50);
@@ -166,10 +166,10 @@ let ServicesSection=()=>{
                 <div className='services-content'>
                     <ServicesDescription/>
                     <CardSection>
-                        <GenericCard icon={<FiPenTool/>} title={`UI/UX Design`} number={3}/>
+                        <GenericCard icon={<FiPenTool/>} title={`UI/UX Design`} number={2}/>
                         <GenericCard icon={<GoCode/>} title={`Web Applications`} number={6} />
                         <GenericCard icon={<FaDesktop/>} title={`Desktop Applications`} number={2} />
-                        <GenericCard icon={<BsGraphUpArrow/>} title={`S.E.O`} number={4} />
+                        <GenericCard icon={<BsGraphUpArrow/>} title={`S.E.O`} number={1} />
                     </CardSection>
                     <Analytics changeStatus={changeStatus} stopCounter={stopCounter}>
                         <Numbers number={years} description={`Years of Experience`} />
