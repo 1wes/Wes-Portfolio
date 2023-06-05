@@ -12,7 +12,7 @@ let SectionHeader=({header, tagline})=>{
             <div className='services-description'>
                 <p className='services-header'> {header}</p>
 
-                <div className='services-punchline'>
+                <div className='header-divider'>
                 </div>
 
                 <div className='services-detail'>
