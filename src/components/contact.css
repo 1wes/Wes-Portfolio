@@ -3,13 +3,6 @@
     border-bottom: 2.5px solid var(--accent-color);
 }
 
-.contact-punchline{
-    font-size: 40px;
-    margin: 15px;
-    font-weight: 600;
-    margin-top: -5px;
-}
-
 #contact-card-section{
     display: block;
 }

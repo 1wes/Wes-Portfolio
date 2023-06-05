@@ -6,16 +6,6 @@
     padding-top: 60px;
 }
 
-.portfolio-punchline{
-    font-size: 40px;
-    margin-top: -5px;
-    font-weight: 600;
-}
-
-.portfolio-details{
-    margin-top: 15px;
-}
-
 #portfolio-card-section{
     display: flex;
     flex-direction: column;
