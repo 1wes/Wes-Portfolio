@@ -7,6 +7,22 @@ nav, .services-content, .portfolio-content, .contact-content{
     padding-top: 40px;
 }
 
+.image{
+    background-color: var(--accent-color);
+    margin:0 10px 0 0;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.image img{
+    height: auto;
+    width: 30px;
+}
+
 nav div:first-child::after, nav div:nth-child(2) ul li::after, .learn-more::after,.contact-info::after{
     content: '';
     position: absolute;
@@ -29,12 +45,18 @@ nav div:nth-child(2) ul li::after{
     margin-top: 39px;
 }
 
+nav div:first-child::after{
+    margin-top: 60px;
+}
+
 .logo{
-    width: 5%;
+    width: 10%;
     font-size: 30px;
     font-weight:bold;
     padding: 0 5px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .logo:hover{
@@ -54,7 +76,7 @@ nav div:nth-child(2) ul li::after{
 
 .nav-menu-content{
     display: flex;
-    width: 95%;
+    width: 90%;
     justify-content: flex-end;
     padding: 20px 0;
     font-weight: medium;
