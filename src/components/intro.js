@@ -66,7 +66,7 @@ let MyDescription=({onClick})=>{
         <React.Fragment>
             <div className="description">
                 <p className="intro-header">
-                    INTRODUCTION
+                    GET TO KNOW ME
                 </p>
                 <p>
                     UI/UX Designer, <br/>
@@ -74,8 +74,8 @@ let MyDescription=({onClick})=>{
                 </p>
 
                 <p>
-                    Lorem ipsum dolor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupida non proident, sunt in culpa qui officia
+                    I passionately code beautiful, yet simple software to create lasting digital experiences. At the core of this passion, is a keen adherence to 
+                    industry-accepted user experience guidelines.
                 </p>
 
                 <div className="learn-more" onClick={onClick}>
