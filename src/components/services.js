@@ -11,15 +11,15 @@ let ServicesDescription=()=>{
 
         <React.Fragment>
             <div className='services-description'>
-                <p className='services-header'>SERVICES</p>
+                <p className='services-header'>MY SERVICES & SKILLSET</p>
 
                 <div className='services-punchline'>
-                    What I Am Great At
+                    What I Am Great At..
                 </div>
 
                 <div className='services-detail'>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupida non proident, sunt in culpa qui officia
+                    My high adaptability to different user requirements and life-long learning passion has enabled me to gather diverse skills that
+                    enable me to accomplish my work. Here are some of them.
                 </div>
             </div> 
         </React.Fragment>
