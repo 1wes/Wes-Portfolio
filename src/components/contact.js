@@ -2,12 +2,12 @@ import React from "react";
 import './contact.css';
 import { CardSection } from "./services";
 import { CardRow } from "./portfolio";
-import { MdMail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaFacebookSquare, FaInstagramSquare, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { GoChevronUp } from "react-icons/go";
 import { SectionHeader } from "./services";
+import { FormLabel, TextField } from "@mui/material";
 
 let ContactDescription=()=>{
 
@@ -55,6 +55,43 @@ let GoUp=({onClick})=>{
     )
 }
 
+let ContactForm=()=>{
+
+    return(
+        <React.Fragment>
+            <div className="contact-form-section">
+                <form className="contact-form">
+                    <label className="form-label">
+                        Name
+                    </label>
+                    <div className="input-field">
+                        <input type="text" placeholder="Enter your name"/>
+                    </div>
+                    
+                    <label className="form-label">
+                        Email
+                    </label>
+                    <div className="input-field">
+                        <input type="email" placeholder="Enter your email" />
+                    </div>
+
+                    <label className="form-label">
+                       Message
+                    </label>
+                    <div className="input-field">
+                        <textarea autoComplete="off" placeholder="Enter your message"/>
+                    </div>
+                    <div className="cta-btn" id="contact-form-cta">
+                        <button type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </React.Fragment>
+    )
+}
+
 let Contact=()=>{
 
     const scrollToTop=()=>{
@@ -66,14 +103,14 @@ let Contact=()=>{
             <div className="contact-section" id="contact-me">
                 <div className="contact-content">
                     <ContactDescription/>
+                    <ContactForm/>
                     <CardSection id={`contact-card-section`}>
                         <CardRow>
-                            <ContactCard contactIcon={<MdMail/>} contact={`mailto:okemwawes@gmail.com`} address={`okemwawes@gmail.com`} />
                             <ContactCard contactIcon={<BsTelephoneFill/>} contact={`tel:+254 7 03 239124`} address={`+254 7 03 239124`} />
                             <ContactCard contactIcon={<FaTwitter/>} contact={`https://twitter.com/okemwa_wes`} address={`@okemwa_wes`} />
+                            <ContactCard contactIcon={<FaLinkedinIn/>} contact={`https://www.linkedin.com/in/okemwa-wes/`} address={`okemwa-wesley`} />
                         </CardRow>
                         <CardRow>
-                            <ContactCard contactIcon={<FaLinkedinIn/>} contact={`https://www.linkedin.com/in/okemwa-wes/`} address={`okemwa-wesley`} />
                             <ContactCard contactIcon={<FaInstagramSquare/>} contact={`https://z-p15.www.instagram.com/w_es.le_y/`} address={`@w_es.le_y`} />
                             <ContactCard contactIcon={<FaFacebookSquare/>} contact={`https://web.facebook.com/wes.wesley.794`} address={`okemwa wes`}/>
                         </CardRow>
