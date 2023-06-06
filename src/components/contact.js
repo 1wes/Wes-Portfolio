@@ -7,6 +7,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { FaFacebookSquare, FaInstagramSquare, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { GoChevronUp } from "react-icons/go";
 import { SectionHeader } from "./services";
+import axios from '../baseurl';
 
 let ContactDescription=()=>{
 
@@ -113,7 +114,7 @@ let Contact=()=>{
         setMessage(message);
     });
 
-    const submitForm=(e=>{
+    const submitForm=async(e)=>{
 
         e.preventDefault();
 
@@ -123,13 +124,13 @@ let Contact=()=>{
             message:message
         }
 
-        alert(JSON.stringify(formData));
+        axios.post('/sendMail', formData).then(res=>{
+            alert(JSON.stringify(res.data));
+        }).catch(err=>{
+            console.log(err.response); 
+        })
 
-        setEmail('')
-        setMessage('')
-        setName('')
-
-    });
+    };
 
 
     return(
