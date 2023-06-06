@@ -64,21 +64,21 @@ let ContactForm=({onSubmit, onNameChange, onEmailChange, onMessageChange, name, 
                         Name
                     </label>
                     <div className="input-field">
-                        <input type="text" placeholder="Enter your name" value={name} onChange={onNameChange} required />
+                        <input type="text" placeholder="Enter your name" value={name} onChange={e=>{onNameChange(e.target.value)}} required />
                     </div>
                     
                     <label className="form-label">
                         Email
                     </label>
                     <div className="input-field">
-                        <input type="email" placeholder="Enter your email" value={email} onChange={onEmailChange} required />
+                        <input type="email" placeholder="Enter your email" value={email} onChange={e=>{onEmailChange(e.target.value)}} required />
                     </div>
 
                     <label className="form-label">
                        Message
                     </label>
                     <div className="input-field">
-                        <textarea autoComplete="off" placeholder="Enter your message" value={message} onChange={onMessageChange} required />
+                        <textarea autoComplete="off" placeholder="Enter your message" value={message} onChange={e=>{onMessageChange(e.target.value)}} required />
                     </div>
                     <div className="cta-btn" id="contact-form-cta">
                         <button type="submit">
@@ -93,9 +93,9 @@ let ContactForm=({onSubmit, onNameChange, onEmailChange, onMessageChange, name, 
 
 let Contact=()=>{
 
-    const [name, setName]=useState(null);
-    const [email, setEmail]=useState(null);
-    const [message, setMessage]=useState(null);
+    const [name, setName]=useState('');
+    const [email, setEmail]=useState('');
+    const [message, setMessage]=useState('');
 
     const scrollToTop=()=>{
         window.scrollTo({top:0, left:0, behavior:"smooth"});
@@ -117,15 +117,17 @@ let Contact=()=>{
 
         e.preventDefault();
 
-        alert(JSON.stringify(name+email+message))
+        let formData={
+            sender:name,
+            email:email,
+            message:message
+        }
 
-        // let formData={
-        //     sender:name,
-        //     email:email,
-        //     message:message
-        // }
+        alert(JSON.stringify(formData));
 
-        // alert(JSON.stringify(formData));
+        setEmail('')
+        setMessage('')
+        setName('')
 
     });
 
@@ -135,7 +137,8 @@ let Contact=()=>{
             <div className="contact-section" id="contact-me">
                 <div className="contact-content">
                     <ContactDescription/>
-                    <ContactForm onSubmit={submitForm} onNameChange={handleNameChange} onEmailChange={handleEmailChange} onMessageChange={handleMessageChange} />
+                    <ContactForm onSubmit={submitForm} onNameChange={handleNameChange} onEmailChange={handleEmailChange} 
+                    onMessageChange={handleMessageChange} name={name} email={email} message={message} />
                     <CardSection id={`contact-card-section`}>
                         <CardRow>
                             <ContactCard contactIcon={<BsTelephoneFill/>} contact={`tel:+254 7 03 239124`} address={`+254 7 03 239124`} />
