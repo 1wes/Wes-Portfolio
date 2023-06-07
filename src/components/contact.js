@@ -131,6 +131,9 @@ let Contact=()=>{
             console.log(err.response); 
         })
 
+        setName('');
+        setEmail('');
+        setMessage('');
     };
 
 
