@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/navbar';
 import IntroSection from './components/intro';
 import ServicesSection from './components/services';
-import Portfolios from './components/portfolio';
+import Portfolio from './components/portfolio';
 import Contact from './components/contact';
 import Footer from './components/footer';
 
@@ -15,7 +15,7 @@ let App=()=>{
         <Navbar/>
         <IntroSection/>
         <ServicesSection/>
-        <Portfolios/>
+        <Portfolio/>
         <Contact/>
         <Footer/>
       </div>
