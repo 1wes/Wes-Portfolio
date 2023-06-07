@@ -8,6 +8,7 @@ import { FaFacebookSquare, FaInstagramSquare, FaLinkedinIn, FaTwitter } from "re
 import { GoChevronUp } from "react-icons/go";
 import { SectionHeader } from "./services";
 import axios from '../baseurl';
+import { Divider } from "@mui/material";
 
 let ContactDescription=()=>{
 
@@ -140,15 +141,12 @@ let Contact=()=>{
                     <ContactDescription/>
                     <ContactForm onSubmit={submitForm} onNameChange={handleNameChange} onEmailChange={handleEmailChange} 
                     onMessageChange={handleMessageChange} name={name} email={email} message={message} />
+                    <Divider role='presentation' className="contact-divider" >OR</Divider>
                     <CardSection id={`contact-card-section`}>
                         <CardRow>
                             <ContactCard contactIcon={<BsTelephoneFill/>} contact={`tel:+254 7 03 239124`} address={`+254 7 03 239124`} />
                             <ContactCard contactIcon={<FaTwitter/>} contact={`https://twitter.com/okemwa_wes`} address={`@okemwa_wes`} />
                             <ContactCard contactIcon={<FaLinkedinIn/>} contact={`https://www.linkedin.com/in/okemwa-wes/`} address={`okemwa-wesley`} />
-                        </CardRow>
-                        <CardRow>
-                            <ContactCard contactIcon={<FaInstagramSquare/>} contact={`https://z-p15.www.instagram.com/w_es.le_y/`} address={`@w_es.le_y`} />
-                            <ContactCard contactIcon={<FaFacebookSquare/>} contact={`https://web.facebook.com/wes.wesley.794`} address={`okemwa wes`}/>
                         </CardRow>
                     </CardSection>
                 </div>
