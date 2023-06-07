@@ -26,8 +26,7 @@ let SectionHeader=({header, tagline})=>{
 let ServicesDescription=()=>{
 
     const header=`MY SERVICES & SKILLSET`;
-    const tagline=` My high adaptability to different user requirements and life-long learning passion has enabled me to gather diverse skills that
-    enable me to accomplish my work. Here are some of them.`
+    const tagline=` Check out some of the skills I have acquired and where they can be applied.`
 
     return(
 
