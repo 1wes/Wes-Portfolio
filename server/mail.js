@@ -2,15 +2,50 @@ const express=require('express');
 const app=express();
 const router=express.Router();
 const cors=require('cors');
-const { port }=require('./env-config');
+const { port, myEmail, pass }=require('./env-config');
+const nodemailer=require('nodemailer');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors({}));
 
+const transporter=nodemailer.createTransport({
+    service:"gmail",
+    auth:{
+        user:myEmail,
+        pass:pass
+    },
+})
+
+transporter.verify(err=>{
+
+    if(err){
+        console.log(err);
+    }else{
+        console.log("Ready to send email");
+    }
+});
+
 router.post("/sendMail", (req, res)=>{
 
-   res.send("Am working well naw");
+    let {sender, email, message}=req.body;
+
+    let mailOptions={
+        from:sender,
+        to:myEmail,
+        subject:`New Message From Portfolio Contact Form`,
+        text:`Name:${sender} \n Email: ${email} \n Message: ${message}`
+    }
+
+    transporter.sendMail(mailOptions, err=>{
+
+        if(err){
+            console.log(err);
+            res.sendStatus(503);
+        }else{
+            res.sendStatus(200);
+        }
+    })
 });
 
 app.use("/", router);
