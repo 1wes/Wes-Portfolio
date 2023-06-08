@@ -30,35 +30,30 @@ let CardRow=({children})=>{
     )
 }
 
-let PortfolioCards=({title, src, livelink, codebaselink})=>{
+let PortfolioCards=({title, src, description, projectLink})=>{
 
     return(
         <>
-        <div className="portfolio-cards">
-            <div className="project-title">
-                {title}
-            </div>
-            <div className="portfolio-image">
-                <img src={src}/>
+        <div className="portfolio-card">
+            <div className="project-image">
+                <img src={src} />
             </div>
             <div className="project-details">
-                <div className="name">
-                    <Link to={livelink} target="blank">
-                        <Tooltip title={`Go to the site`} arrow placement="top">
-                            <i>
-                                <FiExternalLink/>
-                            </i>
-                        </Tooltip>
-                    </Link>
-                </div>
-                <div className="code">
-                    <Link to={codebaselink} target="blank">
-                        <Tooltip title={`Go to the codebase`} arrow placement="top">
-                            <i>
-                                <BiCodeAlt/>
-                            </i>
-                        </Tooltip>
-                    </Link>
+                <div className="details-wrapper">
+                    <div className="project-name">
+                        {title}
+                    </div>
+                    <div className="project-description">
+                        {description}
+                    </div>
+                    <div className="cta-btn">
+                        <Link to={projectLink}>
+                        <button type='button' >
+                            Case Study
+                        </button>
+                        </Link>
+ 
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,7 +61,7 @@ let PortfolioCards=({title, src, livelink, codebaselink})=>{
     )
 }
 
-let Portfolios=()=>{
+let Portfolio=()=>{
 
     return(
 
@@ -76,13 +71,16 @@ let Portfolios=()=>{
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
                         <CardRow>
-                            <PortfolioCards src={require('../accuweights.png')} title={`Accuweights`} livelink={`https://www.accuweights.com/`} codebaselink={``}/>
+                            <PortfolioCards />
+                            {/* <PortfolioCards src={require('../accuweights.png')} title={`Accuweights`} livelink={`https://www.accuweights.com/`} codebaselink={``}/>
                             <PortfolioCards src={require('../tictactoe.png')} title={`Tic-Tac-Toe`} livelink={`https://1wes.github.io/`} codebaselink={`https://github.com/1wes/1wes.github.io`} />
-                            <PortfolioCards src={require('../KABU.png')} title={`Shadow KABU student portal`} livelink={``} codebaselink={`https://github.com/1wes/KABU-shadow-student-portal`}/>
+                            <PortfolioCards src={require('../KABU.png')} title={`Shadow KABU student portal`} livelink={``} codebaselink={`https://github.com/1wes/KABU-shadow-student-portal`}/> */}
                         </CardRow>
                         <CardRow>
-                            <PortfolioCards title={`Portfolio`} codebaselink={`https://github.com/1wes/Wes-Portfolio`}/>
-                            <PortfolioCards title={`Ziada Lite`} />
+                        {/* <PortfolioCards /> */}
+
+                            {/* <PortfolioCards title={`Portfolio`} codebaselink={`https://github.com/1wes/Wes-Portfolio`}/>
+                            <PortfolioCards title={`Ziada Lite`} /> */}
                         </CardRow>
                     </CardSection>
                 </div>
@@ -95,4 +93,4 @@ export{
     CardRow
 }
 
-export default Portfolios;
+export default Portfolio;
