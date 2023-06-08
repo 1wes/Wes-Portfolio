@@ -1,7 +1,9 @@
 require('dotenv').config();
 
-const {PORT}=process.env;
+const {PORT, EMAIL, PASSWORD}=process.env;
 
 module.exports={
-    port:PORT
+    port:PORT,
+    myEmail:EMAIL,
+    pass:PASSWORD
 }
