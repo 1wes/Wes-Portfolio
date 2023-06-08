@@ -63,24 +63,29 @@ let PortfolioCards=({title, src, description, projectLink})=>{
 
 let Portfolio=()=>{
 
-    return(
+    const accuweightDescription=`Accuweights is a renowned technical services provider that caters for various industrial requisites such as 
+    repair and calibration of measuring equipment. I revamped their website to give it a more modern look and feel.`;
 
+    const KabuDescription=`I fully replicated the Kabarak University student portal. The front-end is entirely similar to the actual portal, while I used 
+    the student flow within the system to try and build the backend.`;
+
+    const tictactoeDescription=`I built this popular game to learn and master several advanced React principles. The game has a minimalist look, with plans
+    underway to enable online multi-players.`
+
+    return(
         <React.Fragment>
             <div className="portfolio-section" id='my-portfolio'>
                 <div className="portfolio-content">
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
                         <CardRow>
-                            <PortfolioCards />
-                            {/* <PortfolioCards src={require('../accuweights.png')} title={`Accuweights`} livelink={`https://www.accuweights.com/`} codebaselink={``}/>
-                            <PortfolioCards src={require('../tictactoe.png')} title={`Tic-Tac-Toe`} livelink={`https://1wes.github.io/`} codebaselink={`https://github.com/1wes/1wes.github.io`} />
-                            <PortfolioCards src={require('../KABU.png')} title={`Shadow KABU student portal`} livelink={``} codebaselink={`https://github.com/1wes/KABU-shadow-student-portal`}/> */}
+                            <PortfolioCards title={`Accuweights`} src={require('../accuweights.png')} projectLink={``} description={accuweightDescription} />
                         </CardRow>
                         <CardRow>
-                        {/* <PortfolioCards /> */}
-
-                            {/* <PortfolioCards title={`Portfolio`} codebaselink={`https://github.com/1wes/Wes-Portfolio`}/>
-                            <PortfolioCards title={`Ziada Lite`} /> */}
+                            <PortfolioCards title={`Replica KABU Student Portal`} src={require('../kabu.png')} projectLink={``} description={KabuDescription} />
+                        </CardRow>
+                        <CardRow>
+                            <PortfolioCards title={`Tic-Tac-Toe`} src={require('../tictactoe.png')} projectLink={``} description={tictactoeDescription} />
                         </CardRow>
                     </CardSection>
                 </div>
