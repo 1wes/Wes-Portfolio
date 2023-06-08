@@ -9,14 +9,11 @@
 #portfolio-card-section{
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 0px;
     width: 100%;
     padding-bottom: 60px;
 }
 
-.card-row:not(:last-child){
-    margin-bottom: 30px;
-}
 
 .card-row{
     display: flex;
@@ -24,75 +21,39 @@
     height: 100%;
 }
 
-.portfolio-cards{
-    height: 50vh;
-    width: 33.33%;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    box-shadow: 2px 8px 6px 3px rgba(0, 0, 0, 0.3);
-}
-
-.portfolio-cards:hover{
-    box-shadow: 2px 4px 6px 3px rgba(218, 218, 218, 0.3);
-}
-
-.card-row .portfolio-cards:first-child{
-    margin-left: 10px;
-}
-
-.card-row .portfolio-cards{
-    margin: 0 30px 0 0;
-}
-
-.project-title{
-    height: 10%;
+.portfolio-card{
     display: flex;
-    align-items: center;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    padding-left: 10px;
-    border-bottom: 1px solid var(--main-color);
-    background-color: var(--accent-color);
-    font-weight: 600;
-}
-
-.portfolio-image{
-    height: 80%;
-    overflow: hidden;
-}
-
-.portfolio-image img{
-    height: 100%;
     width: 100%;
-    object-fit:cover;
-    filter: grayscale(100%) brightness(50%);
-    transition:all .3s ease-in-out;
+    text-align: left;
 }
 
-.portfolio-image img:hover{
-    transform: scale(1.5);
-    filter: grayscale(0) brightness(100%);
-}
-
-.project-details{
-    display: flex;
-    align-items: center;
-    height: 10%;
-    background-color: var(--main-color);
-    border-top: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    font-weight: 600;
-}
-
-.name, .code{
+.project-image{
     width: 50%;
 }
 
-.name i, .code i{
-    color: var(--accent-color);
-    font-size: 20px;
+.project-image img{
+    height: auto;
+    width: 100%;
 }
 
-.name{
-    border-right: 1px solid var(--accent-color);
+.project-details{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.details-wrapper{
+    align-items: center;
+}
+
+.project-name{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+}
+
+.project-description{
+    line-height: 28px;
+    margin: 20px 0 20px;
+    font-weight: 400;
 }
