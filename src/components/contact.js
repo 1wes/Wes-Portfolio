@@ -3,12 +3,12 @@ import './contact.css';
 import { CardSection } from "./services";
 import { CardRow } from "./portfolio";
 import { Link } from "react-router-dom";
-import { BsTelephoneFill } from "react-icons/bs";
-import { FaFacebookSquare, FaInstagramSquare, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { BsTelephoneFill, BsCheck2Circle } from "react-icons/bs";
+import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { GoChevronUp } from "react-icons/go";
 import { SectionHeader } from "./services";
 import axios from '../baseurl';
-import { Divider } from "@mui/material";
+import { Divider, Modal, Box } from "@mui/material";
 
 let ContactDescription=()=>{
 
@@ -93,11 +93,51 @@ let ContactForm=({onSubmit, onNameChange, onEmailChange, onMessageChange, name, 
     )
 }
 
+const boxSstyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 550,
+    bgcolor: '#2E2E35',
+    boxShadow: 25,
+    p: 4,
+    color:'#DADADA',
+    textAlign:'center',
+    borderRadius:'5px'
+  };
+
+  let BoxContents=({onClick})=>{
+
+    return(
+        <React.Fragment>
+            <div className="success-icon">
+                <i>
+                    <BsCheck2Circle/>
+                </i>
+            </div>
+            <div className="bold-message">
+                Thank You!
+            </div>
+            <div>
+                Your submission has been sent.
+            </div>
+
+            <div className="cta-btn">
+                <button type="button" onClick={onClick}>
+                    Go Back
+                </button>
+            </div>
+        </React.Fragment>
+    )
+  }
+
 let Contact=()=>{
 
     const [name, setName]=useState('');
     const [email, setEmail]=useState('');
     const [message, setMessage]=useState('');
+    const [open, setOpen]=useState(false);
 
     const scrollToTop=()=>{
         window.scrollTo({top:0, left:0, behavior:"smooth"});
@@ -126,9 +166,9 @@ let Contact=()=>{
         }
 
         axios.post('/sendMail', formData).then(res=>{
-            alert(JSON.stringify(res.data));
+            setOpen(true);
         }).catch(err=>{
-            console.log(err.response); 
+            setOpen(false) 
         })
 
         setName('');
@@ -136,6 +176,7 @@ let Contact=()=>{
         setMessage('');
     };
 
+    const handleClose=()=>setOpen(false)
 
     return(
         <React.Fragment>
@@ -152,8 +193,14 @@ let Contact=()=>{
                             <ContactCard contactIcon={<FaLinkedinIn/>} contact={`https://www.linkedin.com/in/okemwa-wes/`} address={`okemwa-wesley`} />
                         </CardRow>
                     </CardSection>
+
                 </div>
                 <GoUp onClick={scrollToTop} />
+                <Modal open={open} onClose={handleClose}>
+                    <Box sx={boxSstyle}>
+                        <BoxContents onClick={handleClose}/>
+                    </Box>
+                </Modal>
             </div>
         </React.Fragment>
     )
