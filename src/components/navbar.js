@@ -6,6 +6,17 @@ import {FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { goToSection } from '../utils/section';
 
+let LogoImage=()=>{
+
+    return(
+        <React.Fragment>
+            <div className='image'>
+                <img src={require('../wes.png')} alt='logo-image' />
+            </div>
+        </React.Fragment>
+    )
+}
+
 let Navbar=()=>{
 
     const goToPortfolio=()=>{
@@ -21,9 +32,7 @@ let Navbar=()=>{
         <React.Fragment>
             <nav className='main-navbar'>
                 <div className='logo'>
-                    <div className='image'>
-                        <img src={require('../wes.png')} alt='logo-image' />
-                    </div>
+                    <LogoImage/>
                     <p><span>O</span><span>W</span><span>.</span> </p>
                 </div>
                 <div className='nav-menu-content'>
@@ -63,5 +72,8 @@ let Navbar=()=>{
             </nav>
         </React.Fragment>
     )
+}
+export{
+    LogoImage
 }
 export default Navbar;
