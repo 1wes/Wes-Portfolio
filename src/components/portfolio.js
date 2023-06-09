@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import './portfolio.css';
 import { CardSection } from "./services";
 import { Link } from "react-router-dom";
-import { FiExternalLink } from "react-icons/fi";
-import { BiCodeAlt } from "react-icons/bi";
-import { Tooltip } from '@mui/material';
+import axios from "../baseurl";
 import { SectionHeader } from "./services";
 
 let PortfolioDescription=()=>{
@@ -30,7 +28,7 @@ let CardRow=({children})=>{
     )
 }
 
-let PortfolioCards=({title, src, description, projectLink})=>{
+let PortfolioCards=({title, src, description, caseStudyLink})=>{
 
     return(
         <>
@@ -47,7 +45,7 @@ let PortfolioCards=({title, src, description, projectLink})=>{
                         {description}
                     </div>
                     <div className="cta-btn">
-                        <Link to={projectLink}>
+                        <Link to={caseStudyLink}>
                         <button type='button' >
                             Case Study
                         </button>
@@ -63,14 +61,18 @@ let PortfolioCards=({title, src, description, projectLink})=>{
 
 let Portfolio=()=>{
 
-    const accuweightDescription=`Accuweights is a renowned technical services provider that caters for various industrial requisites such as 
-    repair and calibration of measuring equipment. I revamped their website to give it a more modern look and feel.`;
+    const [projects, setProjects]=useState([]);
 
-    const KabuDescription=`I fully replicated the Kabarak University student portal. The front-end is entirely similar to the actual portal, while I used 
-    the student flow within the system to try and build the backend.`;
+    useEffect(()=>{
 
-    const tictactoeDescription=`I built this popular game to learn and master several advanced React principles. The game has a minimalist look, with plans
-    underway to enable online multi-players.`
+        axios.get('/projects').then(res=>{
+
+            setProjects(res.data);
+
+            }).catch(err=>{
+            console.log(err)
+        })
+    },[])
 
     return(
         <React.Fragment>
@@ -78,15 +80,16 @@ let Portfolio=()=>{
                 <div className="portfolio-content">
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
-                        <CardRow>
-                            <PortfolioCards title={`Accuweights`} src={require('../accuweights.png')} projectLink={``} description={accuweightDescription} />
-                        </CardRow>
-                        <CardRow>
-                            <PortfolioCards title={`Replica KABU Student Portal`} src={require('../kabu.png')} projectLink={``} description={KabuDescription} />
-                        </CardRow>
-                        <CardRow>
-                            <PortfolioCards title={`Tic-Tac-Toe`} src={require('../tictactoe.png')} projectLink={``} description={tictactoeDescription} />
-                        </CardRow>
+                        {
+                            projects.map((project)=>{
+                                return(
+                                    <CardRow>
+                                        <PortfolioCards key={project.id} title={project.name} description={project.description}
+                                         src={require(`../${project.snippet}`)} caseStudyLink={`/project/${project.id}`} />
+                                    </CardRow>
+                                )
+                            })
+                        }
                     </CardSection>
                 </div>
             </div>
