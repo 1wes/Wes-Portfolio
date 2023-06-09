@@ -1,14 +1,7 @@
 const express=require('express');
-const app=express();
 const router=express.Router();
-const cors=require('cors');
-const { port, myEmail, pass }=require('./env-config');
 const nodemailer=require('nodemailer');
-const projects=require('./projects');
-
-app.use(express.json());
-app.use(express.urlencoded({extended:true}));
-app.use(cors({}));
+const { myEmail, pass }=require('./env-config');
 
 const transporter=nodemailer.createTransport({
     service:"gmail",
@@ -48,10 +41,4 @@ router.post("/sendMail", (req, res)=>{
         }
     })
 });
-
-app.use("/", router);
-app.use('/', projects)
-
-app.listen(port, ()=>{
-    console.log(`Server started at port ${port}`); 
-});
+module.exports=router;
