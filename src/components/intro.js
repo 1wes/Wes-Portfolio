@@ -1,7 +1,5 @@
 import React from "react";
 import './intro.css';
-import { faArrowDown, faArrowLeftLong, faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { goToSection } from "../utils/section";
 import {FaGithub, FaLinkedin, FaTwitter, FaInstagramSquare} from 'react-icons/fa';
@@ -73,67 +71,6 @@ let Intro=()=>{
     )
 }
 
-// let MyName=({onClick})=>{
-
-//     return(
-
-//         <React.Fragment>
-//             <div className="dev-name">
-//                 <div>Hi <span>👋</span>, I am </div>
-//                 <p>
-//                     <span className="last-name"><span>O</span>kemwa</span> <span className="first-name"><span>W</span>esley<span>.</span></span>
-//                 </p>
-
-//                 <div className="divider">
-//                 </div>
-
-//                 <Socials/>
-
-//                 <div className="cta-btn">
-//                     <button type="button" className="contact-btn" onClick={onClick}>CONTACT ME</button>
-//                 </div>
-//             </div>
-//         </React.Fragment>
-//     )
-// }
-
-// let MyDescription=({onClick})=>{
-
-//     return(
-
-//         <React.Fragment>
-//             <div className="description">
-//                 <p className="intro-header">
-//                     GET TO KNOW ME
-//                 </p>
-//                 <p>
-//                     UI/UX Designer, <br/>
-//                     Full-Stack Web Developer
-//                 </p>
-
-//                 <p>
-//                     I passionately code beautiful, yet simple software to create lasting digital experiences. At the core of this passion, is a keen adherence to 
-//                     industry-accepted user experience guidelines.
-//                 </p>
-
-//                 <div className="learn-more" onClick={onClick}>
-//                         <span><p className="learn-more-text">Learn more  <span className="learn-more-icon"><FontAwesomeIcon icon={faArrowDown}/></span></p> </span>   
-//                 </div>
-
-//                 <div className="carousel-counter">
-//                     <i>
-//                         <FontAwesomeIcon icon={faArrowLeftLong} />
-//                     </i>
-//                     <span>1</span>
-//                     <i>
-//                         <FontAwesomeIcon icon={faArrowRightLong} />
-//                     </i>
-//                 </div>
-//             </div>
-//         </React.Fragment>
-//     )
-// }
-
 let IntroContentSection=({children})=>{
 
     return(
@@ -147,14 +84,6 @@ let IntroContentSection=({children})=>{
 }
 
 let IntroSection=()=>{
-
-    // const goTocontacts=()=>{
-    //     goToSection('contact-me');
-    // }
-
-    // const goToServices=()=>{
-    //     goToSection('my-services');
-    // }
 
     return(
 
