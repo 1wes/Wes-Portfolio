@@ -48,7 +48,7 @@ let Intro=()=>{
     return(
         <React.Fragment>
             <div className="intro">
-                <p className="greeting">Hello 👋, I am </p>
+                <p className="greeting">Hi 👋, I am </p>
 
                 <p className="name">Okemwa Wesley<span>.</span></p>
 

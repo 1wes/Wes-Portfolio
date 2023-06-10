@@ -18,6 +18,10 @@
     align-items: center;
 }
 
+.intro{
+    margin-top: 60px;
+}
+
 .intro p{
     margin: 0 !important;
 }
