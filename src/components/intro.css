@@ -18,10 +18,6 @@
     align-items: center;
 }
 
-.intro{
-    margin-top: -100px;
-}
-
 .intro p{
     margin: 0 !important;
 }
@@ -38,14 +34,15 @@
 .name{
     color: var(--untoned-main-color);
 }
+
 .name, .punchline{
     font-size: 50px;
     font-weight: 600;
     font-size: 48px;
 } 
 
-.punchline, .tagline{
-    color: var(--toned-main-color)
+.punchline{
+    width: 70%;
 }
 
 .tagline{
