@@ -37,13 +37,12 @@ let Navbar=()=>{
                 </div>
                 <div className='nav-menu-content'>
                     <ul>
-                        <li>Home</li>
-                        <li onClick={goToPortfolio}>Projects</li>
-                        <li>Blog
-                            <i>
-                                <FontAwesomeIcon icon={faArrowDownLong} />
-                            </i>
+                        <li>About</li>
+                        <li>
+                            Experience
                         </li>
+                        <li onClick={goToPortfolio}>Projects</li>
+
                         <li onClick={goToContacts}>Contact</li>
                     </ul>
                 </div>
