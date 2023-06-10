@@ -38,35 +38,13 @@ let Navbar=()=>{
                 <div className='nav-menu-content'>
                     <ul>
                         <li>Home</li>
-                        <li onClick={goToPortfolio}>Portfolios</li>
+                        <li onClick={goToPortfolio}>Projects</li>
                         <li>Blog
                             <i>
                                 <FontAwesomeIcon icon={faArrowDownLong} />
                             </i>
                         </li>
                         <li onClick={goToContacts}>Contact</li>
-                        <li></li>
-                        <li>
-                            <Link to={`https://github.com/1wes`} target='blank'>
-                                <i>
-                                    <FaGithub/>
-                                </i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={`https://www.linkedin.com/in/okemwa-wes/`} target='blank'>
-                                <i>
-                                    <FaLinkedin/>
-                                </i>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={`https://twitter.com/okemwa_wes`} target='blank'>
-                                <i>
-                                    <FaTwitter/>
-                                </i>
-                            </Link>
-                        </li>
                     </ul>
                 </div>
             </nav>

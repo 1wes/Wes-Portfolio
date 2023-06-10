@@ -4,22 +4,7 @@ import { faArrowDown, faArrowLeftLong, faArrowRightLong } from '@fortawesome/fre
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { goToSection } from "../utils/section";
-
-let StickyLeftSection=()=>{
-
-    return(
-        <div className="left-sticky-panel">  
-        </div>
-    )
-}
-
-let StickyRightSection=()=>{
-
-    return(
-        <div className="right-sticky-panel">
-        </div>
-    )
-}
+import {FaGithub, FaLinkedin, FaTwitter, FaInstagramSquare} from 'react-icons/fa';
 
 let Socials=()=>{
 
@@ -27,74 +12,127 @@ let Socials=()=>{
 
         <React.Fragment>
             <div className="socials">
-                <li><Link to={`https://medium.com/@okemwawes`} className="social" target="blank">Medium</Link></li>
-                <li><Link to={`https://z-p15.www.instagram.com/w_es.le_y/`} className="social" target="blank">Instagram</Link></li>
-                <li><Link to={`https://web.facebook.com/wes.wesley.794`} className="social" target="blank">Facebook</Link></li>
+                <li>
+                    <Link to={`https://github.com/1wes`} target='blank'>
+                        <i>
+                            <FaGithub/>
+                        </i>
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`https://www.linkedin.com/in/okemwa-wes/`} target='blank'>
+                        <i>
+                            <FaLinkedin/>
+                        </i>
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`https://twitter.com/okemwa_wes`} target='blank'>
+                        <i>
+                            <FaTwitter/>
+                        </i>
+                    </Link>
+                </li>
+                <li>
+                    <Link to={`https://z-p15.www.instagram.com/w_es.le_y/`}>
+                        <i>
+                            <FaInstagramSquare/>
+                        </i>
+                    </Link>
+                </li>
             </div>
         </React.Fragment>
     )
 }
 
-let MyName=({onClick})=>{
+let Intro=()=>{
 
     return(
-
         <React.Fragment>
-            <div className="dev-name">
-                <div>Hi <span>👋</span>, I am </div>
-                <p>
-                    <span className="last-name"><span>O</span>kemwa</span> <span className="first-name"><span>W</span>esley<span>.</span></span>
+            <div className="intro">
+                <p className="greeting">Hello 👋, I am </p>
+
+                <p className="name">Okemwa Wesley<span>.</span></p>
+
+                <p className="punchline">
+                   I build awesome <span>web-based</span> applications.
                 </p>
 
-                <div className="divider">
-                </div>
-
-                <Socials/>
+                <p className="tagline">
+                    I am a Full-Stack software engineer who enjoys building web applications that 
+                    contribute to excellent digital experiences for users. 
+                </p>
 
                 <div className="cta-btn">
-                    <button type="button" className="contact-btn" onClick={onClick}>CONTACT ME</button>
+                    <button>
+                        View My Work
+                    </button>
                 </div>
             </div>
         </React.Fragment>
     )
 }
 
-let MyDescription=({onClick})=>{
+// let MyName=({onClick})=>{
 
-    return(
+//     return(
 
-        <React.Fragment>
-            <div className="description">
-                <p className="intro-header">
-                    GET TO KNOW ME
-                </p>
-                <p>
-                    UI/UX Designer, <br/>
-                    Full-Stack Web Developer
-                </p>
+//         <React.Fragment>
+//             <div className="dev-name">
+//                 <div>Hi <span>👋</span>, I am </div>
+//                 <p>
+//                     <span className="last-name"><span>O</span>kemwa</span> <span className="first-name"><span>W</span>esley<span>.</span></span>
+//                 </p>
 
-                <p>
-                    I passionately code beautiful, yet simple software to create lasting digital experiences. At the core of this passion, is a keen adherence to 
-                    industry-accepted user experience guidelines.
-                </p>
+//                 <div className="divider">
+//                 </div>
 
-                <div className="learn-more" onClick={onClick}>
-                        <span><p className="learn-more-text">Learn more  <span className="learn-more-icon"><FontAwesomeIcon icon={faArrowDown}/></span></p> </span>   
-                </div>
+//                 <Socials/>
 
-                <div className="carousel-counter">
-                    <i>
-                        <FontAwesomeIcon icon={faArrowLeftLong} />
-                    </i>
-                    <span>1</span>
-                    <i>
-                        <FontAwesomeIcon icon={faArrowRightLong} />
-                    </i>
-                </div>
-            </div>
-        </React.Fragment>
-    )
-}
+//                 <div className="cta-btn">
+//                     <button type="button" className="contact-btn" onClick={onClick}>CONTACT ME</button>
+//                 </div>
+//             </div>
+//         </React.Fragment>
+//     )
+// }
+
+// let MyDescription=({onClick})=>{
+
+//     return(
+
+//         <React.Fragment>
+//             <div className="description">
+//                 <p className="intro-header">
+//                     GET TO KNOW ME
+//                 </p>
+//                 <p>
+//                     UI/UX Designer, <br/>
+//                     Full-Stack Web Developer
+//                 </p>
+
+//                 <p>
+//                     I passionately code beautiful, yet simple software to create lasting digital experiences. At the core of this passion, is a keen adherence to 
+//                     industry-accepted user experience guidelines.
+//                 </p>
+
+//                 <div className="learn-more" onClick={onClick}>
+//                         <span><p className="learn-more-text">Learn more  <span className="learn-more-icon"><FontAwesomeIcon icon={faArrowDown}/></span></p> </span>   
+//                 </div>
+
+//                 <div className="carousel-counter">
+//                     <i>
+//                         <FontAwesomeIcon icon={faArrowLeftLong} />
+//                     </i>
+//                     <span>1</span>
+//                     <i>
+//                         <FontAwesomeIcon icon={faArrowRightLong} />
+//                     </i>
+//                 </div>
+//             </div>
+//         </React.Fragment>
+//     )
+// }
 
 let IntroContentSection=({children})=>{
 
@@ -110,24 +148,22 @@ let IntroContentSection=({children})=>{
 
 let IntroSection=()=>{
 
-    const goTocontacts=()=>{
-        goToSection('contact-me');
-    }
+    // const goTocontacts=()=>{
+    //     goToSection('contact-me');
+    // }
 
-    const goToServices=()=>{
-        goToSection('my-services');
-    }
+    // const goToServices=()=>{
+    //     goToSection('my-services');
+    // }
 
     return(
 
         <React.Fragment>
             <div className="intro-section">
-                <StickyLeftSection/>
+                <Socials/>
                 <IntroContentSection>
-                    <MyName onClick={goTocontacts}  />
-                    <MyDescription onClick={goToServices} />
+                    <Intro/>
                 </IntroContentSection>
-                <StickyRightSection/>
             </div>
         </React.Fragment>
     )
