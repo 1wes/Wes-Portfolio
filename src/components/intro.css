@@ -1,63 +1,67 @@
 .intro-section{
-    margin-top: 150px;
-    background-image: url('../person.8f814752.png');
-    background-repeat: no-repeat;
-    background-position-x: 42%;
-    background-position-y: 0%;
-    height: 76vh;
+    height: 87vh;
     display: flex;
     width: 100%;
-}
-
-.left-sticky-panel{
-    width: 15%;
-    position: sticky;
-    left: 0;
-}
-
-.right-sticky-panel{
-    width: 15%;
-    position: sticky;
-    right: 0;
+    position: relative;
+    align-items: center;
+    background-image: url('../wesCartoon.png');
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-position-y: 100%;
 }
 
 .intro-content-section{
     width: 70%;
     display: flex;
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
 }
 
-.dev-name{
-    width: 65%;
-    margin-left: 10px;
+.intro{
+    margin-top: -100px;
 }
 
-.dev-name p{
-    display: flex;
-    flex-direction: column;
-    font-size: 50px;
+.intro p{
     margin: 0 !important;
-    padding: 0 !important;
-    font-weight: bold;
 }
 
-.dev-name div:first-child{
-    font-size: 25px;
-    font-weight: 400;
-    margin-bottom: 5px;
+.intro p:not(:last-child){
+    padding-bottom: 20px;
 }
 
-.dev-name p span:first-child span:first-child, .dev-name p span:nth-child(2) span:first-child{
-    font-size: 53px;
-}
-
-.dev-name p span:nth-child(2) span:nth-child(2){
+.greeting{
+    font-size: 16px;
     color: var(--accent-color);
 }
 
-.description{
-    width: 35%;
+.name{
+    color: var(--untoned-main-color);
+}
+.name, .punchline{
+    font-size: 50px;
+    font-weight: 600;
+    font-size: 48px;
+} 
+
+.punchline, .tagline{
+    color: var(--toned-main-color)
 }
 
+.tagline{
+    width: 50%;
+    line-height: 28px;
+}
+
+.name span{
+    color: var(--accent-color);
+    font-size: 30px;
+}
+
+.brief-description span{
+    color: var(--accent-color);
+    font-weight: 600;
+}
 .divider{
     background-color:var(--accent-color);
     height: 2.5px;
@@ -66,31 +70,34 @@
 }
 
 .socials{
-    margin-top: 20px;
-    display: flex;
+    display: block;
+    position: absolute;
+    left: 0;
+    margin: -100px 0 0 10px
 }
 
 .socials li{
     list-style: none;
     margin-right: 10px;
     font-weight: bold;
-    border-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s ease;
+}
+
+.socials li i{
+    color: var(--main-color );
+    font-size: 18px;
+}
+
+.socials li i:hover{
+    color: var(--accent-color);
+    font-size: 20px;
 }
 
 .social{
     color: var(--main-color);
     text-decoration: none;
     transition: all .1s ease;
-}
-
-.social:hover{
-    color: var(--accent-color);
-    cursor: pointer;
-}
-
-.socials li:not(:last-child){
-    border-right: 2px solid grey !important;
-    padding-right: 10px;
 }
 
 .cta-btn{
