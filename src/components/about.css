@@ -1,6 +1,7 @@
 .about-content{
     margin: 0 auto;
     width: 70%;
+    height: 100%;
 }
 
 .about-layout{
@@ -10,14 +11,48 @@
 .text,.my-tech{
     width: 50%;
     justify-content: flex-start;
-    display: flex;
 }
 
 .text{
     text-align: left;
     line-height: 28px;
+    display: flex;
 }
 
 .text p span{
+    color: var(--accent-color);
+}
+
+.my-tech{
+    margin-left: 30px;
+}
+
+#abt-card-section{
+    display: block;
+}
+
+#abt-row1, #abt-row2, #abt-row3{
+    margin: 0 !important;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 30px !important;
+}
+
+.tech-card{
+    width: 20%;
+}
+
+.tech-card:not(:first-child){
+    margin-left: 30px;
+}
+
+.tech-name{
+    height: 100px;
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.205) 0px 7px 29px 0px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--accent-color);
 }
