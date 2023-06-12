@@ -63,12 +63,6 @@
     color: var(--accent-color);
     font-weight: 600;
 }
-.divider{
-    background-color:var(--accent-color);
-    height: 2.5px;
-    margin: 40px 0 0 0px;
-    width: 6%;
-}
 
 .socials{
     display: block;
@@ -99,6 +93,20 @@
     color: var(--main-color);
     text-decoration: none;
     transition: all .1s ease;
+}
+
+.version{
+    position: fixed;
+    right: 0 !important;
+    bottom: 3%;
+    transform: rotate(-90deg);
+    translate: all .1s ease;
+}
+
+.version:hover{
+    color: var(--accent-color);
+    cursor:none;
+    font-size: 18px;
 }
 
 .cta-btn{
