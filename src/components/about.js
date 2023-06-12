@@ -49,13 +49,11 @@ let Techstack=()=>{
                         <TechStackCard techname={`Node.js`} />
                         <TechStackCard techname={`Express.js`} />
                         <TechStackCard techname={`MySQL`} />
-                        <TechStackCard techname={`MongoDB`} />
                     </CardRow>
                     <CardRow id='abt-row2'>
+                        <TechStackCard techname={`MongoDB`} />
                         <TechStackCard techname={`GitHub`} />
-                        <TechStackCard techname={`HTML`} />
-                        <TechStackCard techname={`CSS`} />
-                        <TechStackCard techname={`SASS`} />
+                        <TechStackCard techname={`HTML/CSS`} />
                         <TechStackCard techname={`Material UI`} />
                     </CardRow>
                 </CardSection>
