@@ -1,5 +1,6 @@
 .work-section{
     width: 100%;
+    padding-bottom: 40px;
 }
 
 .work-content{
@@ -19,6 +20,7 @@
 .company-list ul{
     list-style-type: none;
     padding: 0 !important;
+    margin: 0 !important;
     display: block;
     text-align: left;
     margin-left: 10px;
@@ -28,15 +30,73 @@
     padding: 16px 20px;
     transition: all .1s ease;
     border-left: 2px solid var(--main-color);
+    cursor: pointer;
+}
+
+.initial-active{
+    border-left: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.company-name:hover{
+    background-color: var(--card-color);
+    color: var(--accent-color);
 }
 
 .clicked-company-name{
     border-left: 2px solid var(--accent-color);
     background-color: var(--card-color);
     color: var(--accent-color);
+    cursor: pointer;
 }
 
 .duties{
     width: 80%;
     margin-left: 30px;
+    text-align: left;
+}
+
+.company-wrapper{
+    height: 50vh;
+}
+
+.basic-details{
+    display: flex;
+}
+
+.title{
+    font-weight: bold;
+    margin:0 0 10px 0;
+}
+
+.organization{
+    color: var(--accent-color);
+}
+
+.position{
+    margin:0 0 30px 0;
+    width: 40%;
+}
+
+.duration{
+    font-size: 14px;
+    width: 60%;
+}
+
+.accomplishment-list{
+    margin-bottom: 20px;
+    list-style-type: none;
+    display: flex;
+    width: 60%;
+}
+
+.achievements-text p{
+    line-height: 28px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.accomplishment-list i{
+    color: var(--accent-color);
+    margin:6px 30px 0 0;
 }
