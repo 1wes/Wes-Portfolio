@@ -1,0 +1,23 @@
+.about-content{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.about-layout{
+    display: flex;
+}
+
+.text,.my-tech{
+    width: 50%;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.text{
+    text-align: left;
+    line-height: 28px;
+}
+
+.text p span{
+    color: var(--accent-color);
+}
