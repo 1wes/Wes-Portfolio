@@ -1,9 +1,5 @@
 import './navbar.css';
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons';
-import {FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import { goToSection } from '../utils/section';
 
 let LogoImage=()=>{
@@ -11,7 +7,7 @@ let LogoImage=()=>{
     return(
         <React.Fragment>
             <div className='image'>
-                <img src={require('../wes.png')} alt='logo-image' />
+                <img src={require('../wesCartoon.png')} alt='logo-image' />
             </div>
         </React.Fragment>
     )
