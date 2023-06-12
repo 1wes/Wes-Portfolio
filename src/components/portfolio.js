@@ -17,11 +17,11 @@ let PortfolioDescription=()=>{
     )
 }
 
-let CardRow=({children})=>{
+let CardRow=({children, id})=>{
 
     return(
         <>
-        <div className="card-row">
+        <div className="card-row" id={id}>
             {children}
         </div>
         </>
