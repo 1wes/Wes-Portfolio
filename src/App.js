@@ -7,6 +7,7 @@ import Portfolio from './components/portfolio';
 import Contact from './components/contact';
 import Footer from './components/footer';
 import AboutMe from './components/about';
+import Experience from './components/work';
 
 let App=()=>{
 
@@ -16,6 +17,7 @@ let App=()=>{
         <Navbar/>
         <IntroSection/>
         <AboutMe/>
+        <Experience/>
         <ServicesSection/>
         <Portfolio/>
         <Contact/>
