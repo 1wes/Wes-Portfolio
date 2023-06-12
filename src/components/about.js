@@ -1,6 +1,8 @@
 import React from "react";
 import { SectionHeader } from "./services";
 import './about.css';
+import { CardRow } from "./portfolio";
+import { CardSection } from "./services";
 
 let AboutDescription=()=>{
 
@@ -37,8 +39,39 @@ let Techstack=()=>{
 
     return(
         <React.Fragment>
-            <div>
+            <div className="tech-stack">
+                <p>
+                    Here are some of the technologies I commonly use to accomplish my work:
+                </p>
+                <CardSection id={`abt-card-section`}>
+                    <CardRow id='abt-row1'>
+                        <TechStackCard techname={`React.js`} />
+                        <TechStackCard techname={`Node.js`} />
+                        <TechStackCard techname={`Express.js`} />
+                        <TechStackCard techname={`MySQL`} />
+                        <TechStackCard techname={`MongoDB`} />
+                    </CardRow>
+                    <CardRow id='abt-row2'>
+                        <TechStackCard techname={`GitHub`} />
+                        <TechStackCard techname={`HTML`} />
+                        <TechStackCard techname={`CSS`} />
+                        <TechStackCard techname={`SASS`} />
+                        <TechStackCard techname={`Material UI`} />
+                    </CardRow>
+                </CardSection>
+            </div>
+        </React.Fragment>
+    )
+}
 
+let TechStackCard=({techname})=>{
+
+    return(
+        <React.Fragment>
+            <div className="tech-card">
+                <div className="tech-name">
+                    <strong>{techname}</strong>
+                </div>
             </div>
         </React.Fragment>
     )
