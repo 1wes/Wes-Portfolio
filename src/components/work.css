@@ -1,0 +1,42 @@
+.work-section{
+    width: 100%;
+}
+
+.work-content{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.exp-layout{
+    display: flex;
+    width: 100%;
+}
+
+.company-list{
+    width: 20%;
+}
+
+.company-list ul{
+    list-style-type: none;
+    padding: 0 !important;
+    display: block;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.company-name{
+    padding: 16px 20px;
+    transition: all .1s ease;
+    border-left: 2px solid var(--main-color);
+}
+
+.clicked-company-name{
+    border-left: 2px solid var(--accent-color);
+    background-color: var(--card-color);
+    color: var(--accent-color);
+}
+
+.duties{
+    width: 80%;
+    margin-left: 30px;
+}
