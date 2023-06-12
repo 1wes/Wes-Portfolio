@@ -1,16 +1,30 @@
 .footer{
     background-color: var(--services-color);
     padding: 21px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 16px;
     font-weight: 600;
     border-top: 2px solid var(--accent-color);
 }
 
-.footer-content i{
+.footer-content{
+    width: 100%;
+}
+
+.footer-image{
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.copyright i{
     font-size: 12.5px;
+    margin:3px 3px 0 0;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer span:nth-child(2){
