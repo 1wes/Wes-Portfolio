@@ -2,7 +2,7 @@
     height: 100%;
 }
 
-.services-content, .portfolio-content, .contact-content, .about-content{
+.services-content, .portfolio-content, .contact-content, .about-content, .work-content{
     display: block;
     padding-top: 100px;
     justify-content: center;
