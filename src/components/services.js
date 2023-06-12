@@ -25,13 +25,12 @@ let SectionHeader=({header, tagline})=>{
 
 let ServicesDescription=()=>{
 
-    const header=`MY SERVICES & SKILLSET`;
-    const tagline=` Check out some of the skills I have acquired and where they can be applied.`
+    const header=`SERVICES`;
 
     return(
 
         <React.Fragment>
-            <SectionHeader header={header} tagline={tagline} />
+            <SectionHeader header={header}/>
         </React.Fragment>
     )
 }
