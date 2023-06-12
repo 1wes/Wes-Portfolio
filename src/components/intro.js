@@ -83,6 +83,17 @@ let IntroContentSection=({children})=>{
     )
 }
 
+let Version=()=>{
+
+    return(
+        <React.Fragment>
+            <div className="version">
+                <strong>v. 1.0.0</strong> 
+            </div>
+        </React.Fragment>
+    )
+}
+
 let IntroSection=()=>{
 
     return(
@@ -93,6 +104,7 @@ let IntroSection=()=>{
                 <IntroContentSection>
                     <Intro/>
                 </IntroContentSection>
+                <Version/>
             </div>
         </React.Fragment>
     )
