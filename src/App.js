@@ -6,6 +6,7 @@ import ServicesSection from './components/services';
 import Portfolio from './components/portfolio';
 import Contact from './components/contact';
 import Footer from './components/footer';
+import AboutMe from './components/about';
 
 let App=()=>{
 
@@ -14,6 +15,7 @@ let App=()=>{
       <div className='app'>
         <Navbar/>
         <IntroSection/>
+        <AboutMe/>
         <ServicesSection/>
         <Portfolio/>
         <Contact/>
