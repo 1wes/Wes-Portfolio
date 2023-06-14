@@ -104,4 +104,7 @@ let AboutMe=()=>{
         </React.Fragment>
     )
 }
+export{
+    TechStackCard
+}
 export default AboutMe;
