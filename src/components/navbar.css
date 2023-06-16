@@ -94,17 +94,12 @@ nav div:first-child::after{
 .nav-menu-content ul li{
     cursor: pointer;
     position: relative;
+    transition: .1s ease;
 }
 
-/* .nav-menu-content ul li i{
-    color: var(--main-color);
-} */
-
-/* .nav-menu-content ul li:nth-child(5){
-    border-right:2px solid rgb(115,115,119);
-    cursor:auto;
-} */
-
+.nav-menu-content ul li:hover{
+    color: var(--untoned-main-color);
+}
 .nav-menu-content ul li:not(:last-child){
     margin-right: 25.5px;
 }
