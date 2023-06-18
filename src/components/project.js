@@ -71,7 +71,7 @@ let Project=()=>{
 
     const id=urlParam[2];
 
-    const[project, setProject]=useState({});
+    const[project, setProject]=useState(null);
 
     useEffect(()=>{
 
@@ -85,27 +85,27 @@ let Project=()=>{
                 console.log(err);
         })
 
-    },[]);
+    },[id]);
 
     return(
         <React.Fragment>
             <Navbar/>
             <div className="project-section">
                 <div className="project-content">
-                    <ProjectDetails>
-                        {
-                            console.log(project)
-                            
-                            // project.techstack.map(language=>{
+                    {
+                        project!==null?<ProjectDetails title={project.name} overview={project.description} codebase={project.codebase} src={require(`../${project.snippet}`)}>
+                        {                            
+                            project.techstack && project.techstack.map(language=>{
 
-                            //     return (
-                            //         <CardRow key={project.id}>
-                            //             <TechStackCard techname={language}/>
-                            //         </CardRow>
-                            //     )
-                            // })
+                                return (
+                                    <CardRow key={project.id}>
+                                        <TechStackCard techname={language}/>
+                                    </CardRow>
+                                )
+                            })
                         }
-                    </ProjectDetails>
+                    </ProjectDetails>:console.log("No project found")
+                    }
                 </div>
             </div>
             <Footer/>
