@@ -14,7 +14,7 @@ let ProjectDetails=({children, title, src, overview, codebase, site, header})=>{
     return(
         <React.Fragment>
             <div className="page-header">
-               {header} Case Study
+               Case Study : {header} 
             </div>
             <div className="case-study-wrapper">
                 <div className='cs-image'>
@@ -80,7 +80,7 @@ let Project=()=>{
                 <div className="project-content">
                     {
 
-                        project!==null?<ProjectDetails header={project.name} title={project.name} overview={project.description} codebase={project.codebase} site={project.livelink} src={require(`../${project.casestudyImg}`)}>
+                        project!==null?<ProjectDetails header={project.name} title={project.name} overview={project.caseStudy} codebase={project.codebase} site={project.livelink} src={require(`../${project.casestudyImg}`)}>
                         {                            
                             project.techstack.map(language=>{
 
