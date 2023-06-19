@@ -1,64 +1,92 @@
-.project-section{
-    width: 100%;
-    padding-bottom: 40px;
-}
-
-.project-content{
+.case-study-wrapper, .page-header{
+    display: flex;
     margin: 0 auto;
     width: 70%;
 }
 
-.project-details-wrapper{
-    text-align: center !important;
-}
-
-.project-details-wrapper p{
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.project-intro{
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.project-snippet{
-    width: 100%;
-    margin-top: -250px;
-}
-
-.project-snippet img{
-    height: auto;
-    width: 60%;
-}
-
-.centered-container{
-    margin: 0 auto;
-    width: 50%;
-    text-align: left;
-    margin-top: -50px;
-}
-
-h1, h2{
+.page-header{
+    margin-top: 70px;
     color: var(--accent-color);
+    font-size: 25px;
+    font-weight: 750;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
 }
 
-h2{
-    margin: 30px 0;
+.cs-image, .cs-summary{
+    width: 50%;
+    margin-top: 70px;
+    padding-bottom: 100px;
 }
 
-.summary-text{
+.cs-image{
+    height: 42vh;
+    cursor: pointer;
+}
+
+.cs-image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 7px 29px 0px;
+}
+
+.cs-summary{
+    margin-left:30px;
+    border-radius: 2px;
+    height: 100%;
+}
+
+.overview{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    padding: 10px;
+}
+
+h3{
+    margin: 0 !important;
+    font-size: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+}
+
+.case-study{
     line-height: 28px;
 }
 
-.link-header{
-    margin: 10px 0;
+.tech{
+    margin: 30px 0; 
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech span{
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.tech span:not(:first-child){
+    padding: 0 20px 0 20px;
+}
+.tech span:not(:last-child){
+    border-right: 1px solid gray;
+    padding-right: 20px;
+}
+
+.links{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .links i{
-    color: var(--untoned-main-color);
-    font-size: 30px;
-    margin-right: 50px;
+    color: var(--main-color);
+    font-size: 25px;
+    margin-left: 20px;
+    transition: all .1s ease;
+}
+
+.links i:hover{
+    color: var(--accent-color);
 }
