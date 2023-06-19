@@ -109,7 +109,7 @@ let Experience=()=>{
 
     return(
         <React.Fragment>
-            <div className="work-section">
+            <div className="work-section" id="my-work">
                 <div className="work-content">
                     <SectionHeader header={`WORK EXPERIENCE`} />
                     {

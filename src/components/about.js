@@ -95,7 +95,7 @@ let AboutMe=()=>{
 
     return(
         <React.Fragment>
-            <div className="about-section">
+            <div className="about-section" id="about-me">
                 <div className="about-content">
                     <AboutDescription/>
                     <AboutLayout Biography={<Biography/>} Techstack={<Techstack/>}  />
