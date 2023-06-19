@@ -19,16 +19,19 @@
     padding-bottom: 100px;
 }
 
-.cs-image{
-    height: 42vh;
-    cursor: pointer;
-}
-
 .cs-image img{
     width: 100%;
     height: auto;
-    object-fit: cover;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.6) 0px 7px 29px 0px;
+    filter: grayscale(100);
+    transition: all .1s ease-in-out;
+}
+
+.cs-image img:hover{
+    cursor: pointer;
+    filter: grayscale(0);
+    transform: scale(1.5);
 }
 
 .cs-summary{
