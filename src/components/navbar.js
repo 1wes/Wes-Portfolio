@@ -15,6 +15,14 @@ let LogoImage=()=>{
 
 let Navbar=()=>{
 
+    const gotToAbout=()=>{
+        goToSection('about-me')
+    }
+
+    const goToExperience=()=>{
+        goToSection('my-work')
+    }
+
     const goToPortfolio=()=>{
         goToSection('my-portfolio');
     }
@@ -33,12 +41,9 @@ let Navbar=()=>{
                 </div>
                 <div className='nav-menu-content'>
                     <ul>
-                        <li>About</li>
-                        <li>
-                            Experience
-                        </li>
+                        <li onClick={gotToAbout}>About</li>
+                        <li onClick={goToExperience}>Experience</li>
                         <li onClick={goToPortfolio}>Projects</li>
-
                         <li onClick={goToContacts}>Contact</li>
                     </ul>
                 </div>
