@@ -43,7 +43,7 @@ let Socials=()=>{
     )
 }
 
-let Intro=()=>{
+let Intro=({onClick})=>{
 
     return(
         <React.Fragment>
@@ -62,7 +62,7 @@ let Intro=()=>{
                 </p>
 
                 <div className="cta-btn">
-                    <button>
+                    <button onClick={onClick}>
                         View My Work
                     </button>
                 </div>
@@ -96,13 +96,17 @@ let Version=()=>{
 
 let IntroSection=()=>{
 
+    const goToPortfolio=()=>{
+        goToSection('my-portfolio')
+    }
+
     return(
 
         <React.Fragment>
             <div className="intro-section">
                 <Socials/>
                 <IntroContentSection>
-                    <Intro/>
+                    <Intro onClick={goToPortfolio}/>
                 </IntroContentSection>
                 <Version/>
             </div>
