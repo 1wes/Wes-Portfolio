@@ -82,6 +82,7 @@
 .socials li i{
     color: var(--main-color );
     font-size: 18px;
+    transition: all .1s ease;
 }
 
 .socials li i:hover{
