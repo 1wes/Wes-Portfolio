@@ -56,4 +56,9 @@
     align-items: center;
     justify-content: center;
     color: var(--accent-color);
+    transform: all .1s ease-in-out;
+}
+
+.tech-name:hover{
+    transform: scale(1.1);
 }
