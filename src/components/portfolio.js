@@ -34,7 +34,7 @@ let PortfolioCards=({title, src, description, caseStudyLink})=>{
         <>
         <div className="portfolio-card">
             <div className="project-image">
-                <img src={src} />
+                <img src={src} alt="project" />
             </div>
             <div className="project-details">
                 <div className="details-wrapper">

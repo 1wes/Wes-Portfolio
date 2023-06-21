@@ -7,7 +7,7 @@ let LogoImage=()=>{
     return(
         <React.Fragment>
             <div className='image'>
-                <img src={require('../wesCartoon.png')} alt='logo-image' />
+                <img src={require('../wesCartoon.png')} alt='logo' />
             </div>
         </React.Fragment>
     )
