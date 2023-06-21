@@ -165,7 +165,7 @@ let Contact=()=>{
             message:message
         }
 
-        axios.post('/sendMail', formData).then(res=>{
+        axios.post('https://mail-projectsapi.onrender.com/sendMail', formData).then(res=>{
             setOpen(true);
         }).catch(err=>{
             setOpen(false) 

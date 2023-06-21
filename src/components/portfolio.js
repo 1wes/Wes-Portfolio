@@ -65,7 +65,7 @@ let Portfolio=()=>{
 
     useEffect(()=>{
 
-        axios.get('/projects').then(res=>{
+        axios.get('https://mail-projectsapi.onrender.com/projects').then(res=>{
 
             setProjects(res.data);
 

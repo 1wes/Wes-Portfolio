@@ -61,7 +61,7 @@ let Project=()=>{
 
     useEffect(()=>{
 
-        axios.get(`/project/${id}`).then(res=>{
+        axios.get(`https://mail-projectsapi.onrender.com/project/${id}`).then(res=>{
 
             const newProject=res.data;
 
