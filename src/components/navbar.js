@@ -1,8 +1,21 @@
 import './navbar.css';
 import React from 'react';
 import { goToSection } from '../utils/section';
-import {FaBars} from 'react-icons/fa'
+import {FaBars} from 'react-icons/fa';
+import { MdClose } from 'react-icons/md'
+import { useState } from 'react';
+
 let MobileNav=()=>{
+
+    const [showHamburgerMenu, setShowHamburgerMenu]=useState(false);
+
+    const showDropDownMenu=()=>{
+        setShowHamburgerMenu(!showHamburgerMenu);
+
+        let hamburgerMenu=document.getElementById('hamburger-menu');
+
+        hamburgerMenu.classList.toggle('show-menu')
+    }
 
     return(
         <React.Fragment>
@@ -12,9 +25,21 @@ let MobileNav=()=>{
                 </div>
                 <div className='mobile-nav-menu-content'>
                     <div className='mobile-hamburger'>
-                        <i>
-                            <FaBars/>
+                        <i onClick={showDropDownMenu}>
+                            {
+                                showHamburgerMenu?<MdClose/>:<FaBars/>
+                            }
                         </i>
+                        <div className='dropdown-menu' id='hamburger-menu'>
+                            <div className='dropdown-content'>
+                                <ul>
+                                    <li>About</li>
+                                    <li>Experience</li>
+                                    <li>Projects</li>
+                                    <li>Contact</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
