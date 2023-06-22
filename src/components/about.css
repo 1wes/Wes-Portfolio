@@ -64,8 +64,35 @@
 }
 
 @media only screen and (max-width:480px){
-    .about-section{
-        display: none;
+
+    .about-content{
+        width: 95%;
+    }
+
+    .about-layout{
+        flex-direction: column;
+    }
+
+    .text,.my-tech{
+        width: 100%;
+    }
+
+    .my-tech{
+        margin: 20px 0 0 0;
+    }
+
+    .tech-stack p{
+        text-align: left;
+        line-height: 28px;
+    }
+
+    .tech-name{
+        height: 90px;
+        width: 90px;
+    }
+
+    .tech-card:not(:first-child){
+        margin-left: 20px;
     }
 }
 
