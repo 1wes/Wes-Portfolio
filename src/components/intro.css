@@ -200,16 +200,12 @@
         margin-top: 0 !important;
         background-position: 100%;
         background-position-y: 100%;
-        background-size: 150px 150px;
+        background-size: 200px 200px;
     }
 
     .intro-content-section{
         width: 95%;
     }
-
-    /* .intro{
-        margin-top: 80px;
-    } */
 
     .punchline{
         width: 100%;
