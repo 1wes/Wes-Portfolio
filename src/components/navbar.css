@@ -1,10 +1,13 @@
-nav, .services-content, .portfolio-content, .contact-content{
+.main-navbar, .services-content, .portfolio-content, .contact-content{
     display: flex;
-    width: 100%;
     align-items: center;
     margin: 0 auto !important;
     width: 70%;
     padding-top: 40px;
+}
+
+.mobile-nav{
+    display: none;
 }
 
 .image{
@@ -106,4 +109,55 @@ nav div:first-child::after{
 
 .nav-menu-content ul li:nth-child(3) i{
     margin-left: 5px;
+}
+
+@media only screen and (max-width:480px){
+    .main-navbar{
+        display: none;
+    }
+
+    .mobile-nav{
+        display: flex;
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    .mobile-logo{
+        width: 30%;
+        display: flex;
+        font-size: 20px;
+        font-weight:bold;
+        align-items: center;
+    }
+
+    .mobile-logo p{
+        margin: 0 !important;
+        padding: 0 !important;
+        word-spacing: -.2em;
+        padding: 20px 0;
+    }
+
+    .mobile-logo span:last-child{
+        color: var(--accent-color);
+    }
+
+    .mobile-nav-menu-content{
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mobile-hamburger{
+        padding: 1px 10px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+    }
+
+    .mobile-hamburger i{
+        padding-top: 2.5px;
+    }
 }
