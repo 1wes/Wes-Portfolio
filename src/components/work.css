@@ -142,9 +142,7 @@
     }
 
     .accomplishment-list{
-        display: flex;
         width: 100%;
-        background-color: red;
         padding: 0 !important;
     }
 
