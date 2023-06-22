@@ -130,6 +130,7 @@ nav div:first-child::after{
         font-size: 20px;
         font-weight:bold;
         align-items: center;
+        position: relative;
     }
 
     .mobile-logo p{
@@ -155,9 +156,61 @@ nav div:first-child::after{
         display: flex;
         align-items: center;
         border-radius: 4px;
+        position: relative;
     }
 
     .mobile-hamburger i{
         padding-top: 2.5px;
     }
+
+    .dropdown-menu{
+        position: fixed;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        z-index: 100000;
+        width: 95%;
+        box-shadow: rgba(0, 0, 0, 0.205) 0px 2px 0px 0px;
+        top: 0;
+        margin-top: 75px;
+        display: none;
+        transition: 1s ease-in-out;
+    }
+
+    .show-menu{
+        display: block;
+    }
+
+    .dropdown-content ul{
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 100%;
+        list-style: none;
+    }
+
+    .dropdown-content ul li{
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .dropdown-content ul li:first-child{
+        border-top: 1px solid var(--accent-color);
+    }
+
+    .dropdown-content ul li:not(:last-child){
+        border-bottom: 1px solid var(--accent-color);
+    }
+
+
+    nav div:first-child::after, nav div:nth-child(2) ul li::after, .learn-more::after,.contact-info::after{
+        content: '';
+    }
+
+    nav div:first-child:hover::after, nav div:nth-child(2) ul li:hover::after, .learn-more:hover::after, .contact-info:hover::after{
+        transform: scaleX(0);
+    }
+
+
 }
