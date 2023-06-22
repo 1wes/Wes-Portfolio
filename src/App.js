@@ -8,12 +8,14 @@ import Contact from './components/contact';
 import Footer from './components/footer';
 import AboutMe from './components/about';
 import Experience from './components/work';
+import { MobileNav } from './components/navbar';
 
 let App=()=>{
 
   return(
     <React.Fragment>
       <div className='app'>
+        <MobileNav/>
         <Navbar/>
         <IntroSection/>
         <AboutMe/>
