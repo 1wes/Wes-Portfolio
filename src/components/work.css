@@ -102,8 +102,68 @@
 }
 
 @media only screen and (max-width:480px){
+
     .work-section{
-        display: none;
+        margin: -40px 0 0 0;
     }
+    .work-content{
+        width: 95%;
+    }
+
+    .exp-layout{
+        flex-direction: column;
+    }
+
+    .company-list{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .company-list ul{
+        margin-left: 0;
+    }
+
+    .company-name{
+        border-left: none;
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    .initial-active{
+        border-bottom: 2px solid var(--accent-color);
+    }
+
+    .clicked-company-name{
+        border-bottom: 2px solid var(--accent-color);
+    }
+
+    .duties{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .accomplishment-list{
+        display: flex;
+        width: 100%;
+        background-color: red;
+        padding: 0 !important;
+    }
+
+    .company-list ul{
+        display: flex;
+    }
+
+    .position{
+        width: 50%;
+    }
+    
+    .duration{
+        width: 50%;
+        display: flex;
+    }
+
+    .accomplishment-list i{
+        margin:6px 20px 0 0;
+    }
+    
 }
 
