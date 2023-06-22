@@ -1,6 +1,26 @@
 import './navbar.css';
 import React from 'react';
 import { goToSection } from '../utils/section';
+import {FaBars} from 'react-icons/fa'
+let MobileNav=()=>{
+
+    return(
+        <React.Fragment>
+            <nav className='mobile-nav'>
+                <div className='mobile-logo'>
+                    <LogoImage/> <p><span>O</span><span>W</span><span>.</span> </p>
+                </div>
+                <div className='mobile-nav-menu-content'>
+                    <div className='mobile-hamburger'>
+                        <i>
+                            <FaBars/>
+                        </i>
+                    </div>
+                </div>
+            </nav>
+        </React.Fragment>
+    )
+}
 
 let LogoImage=()=>{
 
@@ -52,6 +72,7 @@ let Navbar=()=>{
     )
 }
 export{
-    LogoImage
+    LogoImage,
+    MobileNav
 }
 export default Navbar;
