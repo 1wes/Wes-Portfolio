@@ -30,16 +30,17 @@ let MobileNav=()=>{
                                 showHamburgerMenu?<MdClose/>:<FaBars/>
                             }
                         </i>
-                        <div className='dropdown-menu' id='hamburger-menu'>
-                            <div className='dropdown-content'>
-                                <ul>
-                                    <li>About</li>
-                                    <li>Experience</li>
-                                    <li>Projects</li>
-                                    <li>Contact</li>
-                                </ul>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+
+                <div className='dropdown-menu' id='hamburger-menu'>
+                    <div className='dropdown-content'>
+                        <ul>
+                            <li>About</li>
+                            <li>Experience</li>
+                            <li>Projects</li>
+                            <li>Contact</li>
+                        </ul>
                     </div>
                 </div>
             </nav>
