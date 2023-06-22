@@ -196,7 +196,7 @@
 
 @media only screen and (max-width:480px){
     .intro-section{
-        height: 91vh;
+        height: 92vh;
         margin-top: 0 !important;
         background-position: 100%;
         background-position-y: 100%;
@@ -211,13 +211,8 @@
         margin-top: 80px;
     }
 
-    .name, .punchline{
-        font-size: 40px;
-    }
-
     .punchline{
         width: 100%;
-        line-height: 50px;
         color: var(--main-color);
     }
 
