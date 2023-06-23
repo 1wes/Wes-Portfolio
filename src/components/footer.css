@@ -37,8 +37,13 @@
 }
 
 @media only screen and (max-width:480px){
+
+    .footer{
+        padding: 21px 21px 21px 0;
+    }
+    
     .footer-image{
-        width: 100%;
+        width: 95%;
     }
 }
 
