@@ -187,7 +187,7 @@ let Contact=()=>{
                     onMessageChange={handleMessageChange} name={name} email={email} message={message} />
                     <Divider role='presentation' className="contact-divider" >OR</Divider>
                     <CardSection id={`contact-card-section`}>
-                        <CardRow>
+                        <CardRow id={`contact-section-card-row`}>
                             <ContactCard contactIcon={<BsTelephoneFill/>} contact={`tel:+254 7 03 239124`} address={`+254 7 03 239124`} />
                             <ContactCard contactIcon={<FaTwitter/>} contact={`https://twitter.com/okemwa_wes`} address={`@okemwa_wes`} />
                             <ContactCard contactIcon={<FaLinkedinIn/>} contact={`https://www.linkedin.com/in/okemwa-wes/`} address={`okemwa-wesley`} />
