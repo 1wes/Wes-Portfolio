@@ -78,7 +78,7 @@ let Project=()=>{
         <React.Fragment>
             <Navbar/>
             <MobileNav/>
-            
+
             <div className="project-section">
                 <div className="project-content">
                     {
@@ -88,9 +88,9 @@ let Project=()=>{
                             project.techstack.map(language=>{
 
                                 return (
-                                    <span>
+                                    <div>
                                         {language}
-                                    </span>
+                                    </div>
                                 )
                             })
                         }
