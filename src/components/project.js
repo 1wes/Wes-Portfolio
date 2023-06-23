@@ -29,7 +29,7 @@ let ProjectDetails=({children, title, src, overview, codebase, site, header})=>{
                         </p>
                     </div>
                     <div className="tech">
-                        <code>{children}</code>
+                        {children}
                     </div>
                     <div className="links">
                         <Link to={codebase} target="blank">
