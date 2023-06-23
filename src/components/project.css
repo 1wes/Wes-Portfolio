@@ -59,27 +59,23 @@ h3{
 }
 
 .tech{
-    margin: 30px 0; 
+    display: flex;
+    flex-direction: row;
     width: 100%;
+    margin: 30px 0; 
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tech code{
-    display: flex;
-    width: 100%;
 }
 
 .tech div{
     font-weight: 700;
     line-height: 35px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    display: flex;
 }
 
 .tech div:not(:first-child){
-    padding: 0 10px;
-}
-.tech div:not(:last-child){
-    padding-right: 10px;
+    margin-left: 10px;
 }
 
 .links{
@@ -118,15 +114,15 @@ h3{
         flex-direction: column;
     }
 
+    .cs-image img{
+        filter: grayscale(0);
+    }
+
     .tech{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
-    
-    .tech div{
-        flex-direction: row;
-        width: 100%;
+
+    .tech div:not(:first-child){
+        margin-left: 0;
     }
-    
 }
