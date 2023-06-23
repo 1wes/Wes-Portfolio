@@ -151,6 +151,12 @@ textarea:focus, input:focus{
         width: 95%;
     }
 
+    .contact-form-section{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
     .contact-form-section form{
         width: 100%;
     }
