@@ -65,17 +65,21 @@ h3{
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.tech span{
+.tech code{
+    display: flex;
+    width: 100%;
+}
+
+.tech div{
     font-weight: 700;
     line-height: 35px;
 }
 
-.tech span:not(:first-child){
-    padding: 0 20px 0 20px;
+.tech div:not(:first-child){
+    padding: 0 10px;
 }
-.tech span:not(:last-child){
-    border-right: 1px solid gray;
-    padding-right: 20px;
+.tech div:not(:last-child){
+    padding-right: 10px;
 }
 
 .links{
@@ -92,4 +96,37 @@ h3{
 
 .links i:hover{
     color: var(--accent-color);
+}
+
+@media only screen and (max-width:480px){
+
+    .case-study-wrapper, .page-header{
+        width: 95%;
+    }
+
+    .case-study-wrapper{
+        flex-direction: column;
+    }
+
+    .cs-image, .cs-summary{
+        width: 100%;
+    }
+
+    .cs-summary{
+        margin-left:0px;
+        margin-top: 0px;
+        flex-direction: column;
+    }
+
+    .tech{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .tech div{
+        flex-direction: row;
+        width: 100%;
+    }
+    
 }
