@@ -64,8 +64,26 @@
 
 
 @media only screen and (max-width:480px){
-    .portfolio-section{
-        display: none;
+    .portfolio-content{
+        width: 95%;
+        padding-top: 0;
     }
+
+    .portfolio-card{
+        flex-direction: column;
+    }
+
+    .card-row:not(:first-child){
+        margin-top: 20px;
+    }
+
+    .project-image{
+        width: 100%;
+    }
+
+    .project-details{
+        width: 100%;
+        text-align: center;
+    } 
 }
 
