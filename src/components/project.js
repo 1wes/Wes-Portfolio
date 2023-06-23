@@ -7,6 +7,7 @@ import './project.css';
 import { Link } from "react-router-dom";
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
+import { MobileNav } from "./navbar";
 
 
 let ProjectDetails=({children, title, src, overview, codebase, site, header})=>{
@@ -76,6 +77,8 @@ let Project=()=>{
     return(
         <React.Fragment>
             <Navbar/>
+            <MobileNav/>
+            
             <div className="project-section">
                 <div className="project-content">
                     {
