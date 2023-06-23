@@ -117,5 +117,10 @@
         margin: 0 0 30px 0;
     }
 
+    .services-detail{
+        width: 100%;
+        text-align: left;
+    }
+
 }
 
