@@ -147,8 +147,35 @@ textarea:focus, input:focus{
 }
 
 @media only screen and (max-width:480px){
-    .contact-section{
-        display: none;
+    .contact-content{
+        width: 95%;
     }
+
+    .contact-form-section form{
+        width: 100%;
+    }
+
+    .contact-card{
+        width: 100%;
+    }
+
+    #contact-section-card-row{
+        flex-direction: column;
+    }
+
+    .contact-card:first-child{
+        margin-left: 0px;
+    }
+
+    .contact-card:not(:last-child){
+        margin: 0 0 30px 0;
+    }
+
+    .go-up-btn{
+        margin-right: 5%;
+        margin-top: -10px;
+        padding-bottom: 50px;
+    }
+    
 }
 
