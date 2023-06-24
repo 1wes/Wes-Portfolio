@@ -172,7 +172,7 @@ nav div:nth-child(2) ul li::after{
         right: 0;
         z-index: 100000;
         width:60%;
-        box-shadow: rgba(0, 0, 0, 0.205) 0px 2px 0px 0px;
+        box-shadow: rgba(0, 0, 0, 0.205) 0px 7px 7px 0px;
         top: 0;
         margin-top: 75px;
         display: none;
@@ -192,7 +192,7 @@ nav div:nth-child(2) ul li::after{
     }
 
     .dropdown-content ul li{
-        padding: 20px 0;
+        padding: 20px 5px;
         display: flex;
         align-items: center;
         font-weight: bold;
