@@ -83,7 +83,7 @@ let Portfolio=()=>{
                         {
                             projects.map((project)=>{
                                 return(
-                                    <CardRow key={project.id}>
+                                    <CardRow id='projects-section-card' key={project.id}>
                                         <PortfolioCards title={project.name} description={project.description}
                                          src={require(`../${project.snippet}`)} caseStudyLink={`/project/${project.id}`} />
                                     </CardRow>
