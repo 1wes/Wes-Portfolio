@@ -134,6 +134,8 @@ nav div:nth-child(2) ul li::after{
         font-weight:bold;
         align-items: center;
         position: relative;
+        text-decoration: none;
+        color: var(--main-color);
     }
 
     .mobile-logo p{
