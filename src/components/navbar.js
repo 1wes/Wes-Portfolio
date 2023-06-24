@@ -67,9 +67,9 @@ let MobileNav=()=>{
     return(
         <React.Fragment>
             <nav className='mobile-nav'>
-                <div className='mobile-logo'>
+                <Link to={`/`} className='mobile-logo'>
                     <LogoImage/> <p><span>O</span><span>W</span><span>.</span> </p>
-                </div>
+                </Link>
                 <div className='mobile-nav-menu-content'>
                     <div className='mobile-hamburger'>
                         <i onClick={showDropDownMenu}>
