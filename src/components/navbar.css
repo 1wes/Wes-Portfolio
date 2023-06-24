@@ -169,9 +169,9 @@ nav div:nth-child(2) ul li::after{
 
     .dropdown-menu{
         position: absolute;
-        left: 0;
+        right: 0;
         z-index: 100000;
-        width: 100%;
+        width:60%;
         box-shadow: rgba(0, 0, 0, 0.205) 0px 2px 0px 0px;
         top: 0;
         margin-top: 75px;
