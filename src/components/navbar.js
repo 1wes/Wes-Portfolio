@@ -10,12 +10,58 @@ let MobileNav=()=>{
 
     const [showHamburgerMenu, setShowHamburgerMenu]=useState(false);
 
+
     const showDropDownMenu=()=>{
-        setShowHamburgerMenu(!showHamburgerMenu);
 
         let hamburgerMenu=document.getElementById('hamburger-menu');
 
-        hamburgerMenu.classList.toggle('show-menu')
+        setShowHamburgerMenu(!showHamburgerMenu);
+
+        hamburgerMenu.classList.toggle('show-menu');
+    }
+
+    const goToAbout=()=>{
+
+        goToSection('about-me');
+
+        let hamburgerMenu=document.getElementById('hamburger-menu');
+
+        setShowHamburgerMenu(!showHamburgerMenu);
+        
+        hamburgerMenu.classList.remove('show-menu');
+    }
+
+    const goToExperience=()=>{
+ 
+        goToSection('my-work');
+
+        let hamburgerMenu=document.getElementById('hamburger-menu');
+
+        setShowHamburgerMenu(!showHamburgerMenu);
+        
+        hamburgerMenu.classList.remove('show-menu');
+    }
+
+    const goToPortfolio=()=>{
+
+        goToSection('my-portfolio');
+
+        let hamburgerMenu=document.getElementById('hamburger-menu');
+
+        setShowHamburgerMenu(!showHamburgerMenu);
+        
+        hamburgerMenu.classList.remove('show-menu');
+    }
+
+    const goToContacts=()=>{
+
+        goToSection('contact-me');
+
+        let hamburgerMenu=document.getElementById('hamburger-menu');
+
+        setShowHamburgerMenu(!showHamburgerMenu);
+        
+        hamburgerMenu.classList.remove('show-menu');
     }
 
     return(
@@ -37,10 +83,10 @@ let MobileNav=()=>{
                 <div className='dropdown-menu' id='hamburger-menu'>
                     <div className='dropdown-content'>
                         <ul>
-                            <li>About</li>
-                            <li>Experience</li>
-                            <li>Projects</li>
-                            <li>Contact</li>
+                            <li onClick={goToAbout}>About</li>
+                            <li onClick={goToExperience}>Experience</li>
+                            <li onClick={goToPortfolio}>Projects</li>
+                            <li onClick={goToContacts}>Contact</li>
                         </ul>
                     </div>
                 </div>
