@@ -4,6 +4,7 @@ import { goToSection } from '../utils/section';
 import {FaBars} from 'react-icons/fa';
 import { MdClose } from 'react-icons/md'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 let MobileNav=()=>{
 
@@ -81,10 +82,9 @@ let Navbar=()=>{
 
         <React.Fragment>
             <nav className='main-navbar'>
-                <div className='logo'>
-                    <LogoImage/>
-                    <p><span>O</span><span>W</span><span>.</span> </p>
-                </div>
+                    <Link className='logo' to={`/`}>
+                        <LogoImage/><p><span>O</span><span>W</span><span>.</span> </p>
+                    </Link>
                 <div className='nav-menu-content'>
                     <ul>
                         <li onClick={gotToAbout}>About</li>
