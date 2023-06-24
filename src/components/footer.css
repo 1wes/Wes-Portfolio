@@ -36,6 +36,10 @@
     padding-left: 20px;
 }
 
+.footer-socials{
+    display: none;
+}
+
 @media only screen and (max-width:480px){
 
     .footer{
@@ -44,6 +48,27 @@
     
     .footer-image{
         width: 95%;
+        display: flex;
+    }
+
+    .footer-logo{
+        width: 15%;
+    }
+
+    .footer-socials{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        right: 0;
+        width: 85%;
+    }
+
+    .footer-socials li{
+        margin-right: 10px;
+    }
+
+    .footer-socials li i{
+        color: var(--main-color);
     }
 }
 
