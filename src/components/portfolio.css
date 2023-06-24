@@ -74,7 +74,7 @@
     }
 
     .card-row:not(:first-child){
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .project-image{
@@ -85,5 +85,14 @@
         width: 100%;
         text-align: center;
     } 
+
+    #projects-section-card{
+        padding-bottom: 20px;
+        box-shadow: rgba(0, 0, 0, 0.105) 0px 7px 29px 0px;
+    }
+
+    #projects-section-card:first-child{
+        margin-top: 10px;
+    }
 }
 
