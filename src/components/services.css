@@ -7,6 +7,13 @@
     padding-top: 100px;
     justify-content: center;
     text-align: center;
+    transform: translateY(40%);
+    opacity: 0;
+    transition: all ease 1.5s;
+}
+
+.services-content{
+    padding-top: 0 !important;
 }
 
 .services-header, .intro-header{
@@ -19,6 +26,12 @@
 .services-header{
     margin-bottom: 20px;
 }
+
+.slide-up{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 
 .header-divider{
     width:3%;
@@ -50,7 +63,9 @@
     width: 25%;
     height: 40vh;
     align-items: center;
-    transition: all .1s ease-in-out;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: all ease 1.5s;
 }
 
 .card:hover{
