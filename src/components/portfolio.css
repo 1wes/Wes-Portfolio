@@ -33,6 +33,9 @@
 
 .project-image{
     width: 50%;
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: all ease 1.5s;
 }
 
 .project-image img{
@@ -44,6 +47,9 @@
     width: 50%;
     display: flex;
     align-items: center;
+    opacity: 0;
+    transform: translateX(20%);
+    transition: all ease 1.5s;
 }
 
 .details-wrapper{
