@@ -1,4 +1,4 @@
-import React , {useState, useEffect} from "react";
+import React from "react";
 import './footer.css';
 import { FaRegCopyright } from "react-icons/fa";
 import { LogoImage } from "./navbar";
@@ -6,33 +6,6 @@ import { Link } from "react-router-dom";
 import {FaGithub, FaLinkedin, FaTwitter, FaInstagramSquare} from 'react-icons/fa';
 
 let Footer=()=>{
-
-    const [isIntersecting, setIsIntersecting]=useState(false)
-
-    useEffect(()=>{
-
-        const observer=new IntersectionObserver(([entry])=>{
-            setIsIntersecting(entry.isIntersecting)
-        }, {rootMargin:"-120px"});
-
-        observer.observe(document.getElementById('app-footer'));
-        console.log(isIntersecting)
-
-        return()=>{
-            observer.disconnect();
-        }
-
-    },[isIntersecting]);
-
-    useEffect(()=>{
-        if(isIntersecting){
-            let navbar=document.getElementById('app-footer');
-
-            navbar.querySelectorAll('div').forEach(list=>{
-                list.classList.add('slide-up')
-            })
-        }
-    },[isIntersecting])
 
     return(
 
