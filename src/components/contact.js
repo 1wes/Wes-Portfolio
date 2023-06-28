@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import './contact.css';
 import { CardSection } from "./services";
 import { CardRow } from "./portfolio";
@@ -138,6 +138,32 @@ let Contact=()=>{
     const [email, setEmail]=useState('');
     const [message, setMessage]=useState('');
     const [open, setOpen]=useState(false);
+    const [isIntersecting, setIsIntersecting]=useState(false)
+
+    useEffect(()=>{
+
+        const observer=new IntersectionObserver(([entry])=>{
+            setIsIntersecting(entry.isIntersecting)
+        }, {rootMargin:"-120px"});
+
+        observer.observe(document.getElementById('contact-me'));
+        console.log(isIntersecting)
+
+        return()=>{
+            observer.disconnect();
+        }
+
+    },[isIntersecting]);
+
+    useEffect(()=>{
+        if(isIntersecting){
+            let navbar=document.getElementById('contact-me');
+
+            navbar.querySelectorAll('div').forEach(list=>{
+                list.classList.add('slide-up')
+            })
+        }
+    },[isIntersecting])
 
     const scrollToTop=()=>{
         window.scrollTo({top:0, left:0, behavior:"smooth"});
