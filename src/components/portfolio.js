@@ -62,6 +62,33 @@ let PortfolioCards=({title, src, description, caseStudyLink})=>{
 let Portfolio=()=>{
 
     const [projects, setProjects]=useState([]);
+    const [isIntersecting, setIsIntersecting]=useState(false)
+
+    useEffect(()=>{
+
+        const observer=new IntersectionObserver(([entry])=>{
+            setIsIntersecting(entry.isIntersecting)
+        }, {rootMargin:"-120px"});
+
+        observer.observe(document.getElementById('my-portfolio'));
+        console.log(isIntersecting)
+
+        return()=>{
+            observer.disconnect();
+        }
+
+    },[isIntersecting]);
+
+    useEffect(()=>{
+        if(isIntersecting){
+            let navbar=document.getElementById('my-portfolio');
+
+            navbar.querySelectorAll('div').forEach(list=>{
+                list.classList.add('slide-sideways')
+            })
+        }
+    },[isIntersecting])
+
 
     useEffect(()=>{
 
