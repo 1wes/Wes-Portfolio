@@ -102,7 +102,6 @@ let AboutMe=()=>{
         }, {rootMargin:"0px"});
 
         observer.observe(document.getElementById('about-me'));
-        console.log(isIntersecting)
 
         return()=>{
             observer.disconnect();
