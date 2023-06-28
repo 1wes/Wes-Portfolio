@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useState, useEffect } from "react";
 import { SectionHeader } from "./services";
 import './about.css';
 import { CardRow } from "./portfolio";
@@ -92,6 +92,33 @@ let AboutLayout=({Biography, Techstack})=>{
 }
 
 let AboutMe=()=>{
+
+    const [isIntersecting, setIsIntersecting]=useState(false)
+
+    useEffect(()=>{
+
+        const observer=new IntersectionObserver(([entry])=>{
+            setIsIntersecting(entry.isIntersecting)
+        }, {rootMargin:"0px"});
+
+        observer.observe(document.getElementById('about-me'));
+        console.log(isIntersecting)
+
+        return()=>{
+            observer.disconnect();
+        }
+
+    },[isIntersecting]);
+
+    useEffect(()=>{
+        if(isIntersecting){
+            let navbar=document.getElementById('about-me');
+
+            navbar.querySelectorAll('div').forEach(list=>{
+                list.classList.add('slide-sideways')
+            })
+        }
+    },[isIntersecting])
 
     return(
         <React.Fragment>
