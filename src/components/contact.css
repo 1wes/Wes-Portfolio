@@ -8,6 +8,9 @@
     background-color: var(--card-color);
     padding: 15px 0;
     align-items: center;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all ease 1.5s;
 }
 
 .contact-card:first-child{
@@ -28,6 +31,9 @@
     margin: 40px 0 0 0;
     color: var(--accent-color) !important;
     margin-bottom: 70px;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all ease 1.5s;
 }
 
 .contact-form-section form{
@@ -113,6 +119,9 @@ textarea:focus, input:focus{
     margin-right: 100px;
     margin-top: -30px;
     padding-bottom: 50px;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all ease 1.5s;
 }
 
 .go-up-btn button{
