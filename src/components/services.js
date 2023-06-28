@@ -112,7 +112,6 @@ let ServicesSection=()=>{
         }, {rootMargin:"-120px"});
 
         observer.observe(document.getElementById('my-services'));
-        console.log(isIntersecting)
 
         return()=>{
             observer.disconnect();

@@ -91,7 +91,6 @@ let Experience=()=>{
         }, {rootMargin:"0px"});
 
         observer.observe(document.getElementById('my-work'));
-        console.log(isIntersecting)
 
         return()=>{
             observer.disconnect();

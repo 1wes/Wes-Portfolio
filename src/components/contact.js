@@ -147,7 +147,6 @@ let Contact=()=>{
         }, {rootMargin:"-120px"});
 
         observer.observe(document.getElementById('contact-me'));
-        console.log(isIntersecting)
 
         return()=>{
             observer.disconnect();

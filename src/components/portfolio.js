@@ -71,7 +71,6 @@ let Portfolio=()=>{
         }, {rootMargin:"-120px"});
 
         observer.observe(document.getElementById('my-portfolio'));
-        console.log(isIntersecting)
 
         return()=>{
             observer.disconnect();
