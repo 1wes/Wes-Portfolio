@@ -82,6 +82,32 @@ let Experience=()=>{
     const [healthIT, setHealthIt]=useState(null);
     const [savannah, setSavannah]=useState(null);
     const [showHealthIt, setShowHealthIT]=useState(true);
+    const [isIntersecting, setIsIntersecting]=useState(false)
+
+    useEffect(()=>{
+
+        const observer=new IntersectionObserver(([entry])=>{
+            setIsIntersecting(entry.isIntersecting)
+        }, {rootMargin:"0px"});
+
+        observer.observe(document.getElementById('my-work'));
+        console.log(isIntersecting)
+
+        return()=>{
+            observer.disconnect();
+        }
+
+    },[isIntersecting]);
+
+    useEffect(()=>{
+        if(isIntersecting){
+            let navbar=document.getElementById('my-work');
+
+            navbar.querySelectorAll('div').forEach(list=>{
+                list.classList.add('slide-sideways')
+            })
+        }
+    },[isIntersecting])
 
     useEffect(()=>{
         let healthIT=document.getElementById('healthIT');
