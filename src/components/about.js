@@ -102,6 +102,7 @@ let AboutMe=()=>{
         }, {rootMargin:"0px"});
 
         observer.observe(document.getElementById('about-me'));
+        console.log(isIntersecting)
 
         return()=>{
             observer.disconnect();
@@ -111,10 +112,10 @@ let AboutMe=()=>{
 
     useEffect(()=>{
         if(isIntersecting){
-            let navbar=document.getElementById('about-me');
+            let aboutMe=document.getElementById('about-me');
 
-            navbar.querySelectorAll('div').forEach(list=>{
-                list.classList.add('slide-sideways')
+            aboutMe.querySelectorAll('div').forEach(element=>{
+                element.classList.add('slide-sideways')
             })
         }
     },[isIntersecting])

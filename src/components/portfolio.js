@@ -68,7 +68,7 @@ let Portfolio=()=>{
 
         const observer=new IntersectionObserver(([entry])=>{
             setIsIntersecting(entry.isIntersecting)
-        }, {rootMargin:"-120px"});
+        }, {rootMargin:"0px"});
 
         observer.observe(document.getElementById('my-portfolio'));
 
