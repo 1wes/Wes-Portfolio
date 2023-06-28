@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './intro.css';
 import { Link } from "react-router-dom";
 import { goToSection } from "../utils/section";
@@ -96,6 +96,37 @@ let Version=()=>{
 
 let IntroSection=()=>{
 
+    const [isIntersecting, setisIntersecting]=useState(false);
+
+    useEffect(()=>{
+
+        const observer=new IntersectionObserver(([entry])=>{
+            setisIntersecting(entry.isIntersecting);
+        }, {rootMargin:'-20px'});
+
+        observer.observe(document.getElementById('intro'));
+
+        return()=>{
+            observer.disconnect();
+        }
+
+    }, [isIntersecting]);
+
+    useEffect(()=>{
+
+        if(isIntersecting){
+            let introSection=document.getElementById('intro');
+
+            introSection.querySelectorAll('p').forEach(paragraph=>{
+                paragraph.classList.add("slide-up");
+            })
+
+            introSection.querySelectorAll('button').forEach(button=>{
+                button.classList.add("slide-up");
+            })
+        }
+    }, [isIntersecting])
+
     const goToPortfolio=()=>{
         goToSection('my-portfolio')
     }
@@ -103,7 +134,7 @@ let IntroSection=()=>{
     return(
 
         <React.Fragment>
-            <div className="intro-section">
+            <div className="intro-section" id='intro'>
                 <Socials/>
                 <IntroContentSection>
                     <Intro onClick={goToPortfolio}/>
