@@ -118,15 +118,15 @@ let IntroSection=()=>{
             let introSection=document.getElementById('intro');
 
             introSection.querySelectorAll('p').forEach(paragraph=>{
-                paragraph.classList.add("slide-up");
+                paragraph.classList.add("slide-sideways");
             })
 
             introSection.querySelectorAll('div').forEach(element=>{
-                element.classList.add("slide-up");
+                element.classList.add("slide-sideways");
             })
 
             introSection.querySelectorAll('button').forEach(button=>{
-                button.classList.add("slide-up");
+                button.classList.add("slide-sideways");
             })
         }
     }, [isIntersecting])

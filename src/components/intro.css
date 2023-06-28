@@ -17,7 +17,6 @@
     height: 100%;
     align-items: center;
     opacity: 0;
-    transform: translateY(0);
     transition: all ease 1s;
 }
 
@@ -27,9 +26,9 @@
 
 .intro p{
     margin: 0 !important;
-    transform: translateY(50%);
+    transform: translateX(-50%);
     opacity: 0;
-    transition: all ease .8s;
+    transition: all ease 1.5s;
 }
 
 .slide-up{
@@ -131,7 +130,7 @@
     font-weight: bold;  
     background: none;
     font-size: 15px;
-    transform: translateY(50%);
+    transform: translateX(-50%);
     opacity: 0;
     transition: all ease .6s;
 }
@@ -164,47 +163,6 @@
 .description p:nth-child(3){
     padding-top: 20px;
     line-height: 25px;
-}
-
-.learn-more{
-    margin-top: 20px;
-    width: 26%;
-    position: relative;
-    padding-bottom: 5px;
-    cursor: pointer;
-}
-
-.learn-more::after{
-    margin-top: 5px;
-}
-
-.learn-more-icon{
-    padding-left: 10px;
-}
-
-.carousel-counter{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 130px;
-    padding: 0 !important;
-    align-items: center ;
-    color: rgb(149,149,149);
-}
-
-.carousel-counter i{
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.carousel-counter span:nth-child(2){
-    font-size: medium;
-    line-height: 0;
-    padding-top: 0 !important;
-    margin: -3px 15px 0 15px;
-}
-
-.carousel-counter i:hover{
-    color:whitesmoke;
 }
 
 @media only screen and (max-width:480px){
