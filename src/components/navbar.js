@@ -115,8 +115,6 @@ let Navbar=()=>{
             setIsIntersecting(entry.isIntersecting)
         }, {rootMargin:"0px"});
 
-        console.log(isIntersecting);
-
         observer.observe(document.getElementById('desktop-nav'));
 
         return()=>{
