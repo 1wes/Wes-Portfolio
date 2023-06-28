@@ -130,7 +130,7 @@
     font-size: 15px;
     transform: translateY(50%);
     opacity: 0;
-    transition: all .6s ease;
+    transition: all ease .6s;
 }
 
 .cta-btn button:hover{

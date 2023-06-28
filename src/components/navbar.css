@@ -99,7 +99,7 @@ nav div:nth-child(2) ul li::after{
 .nav-menu-content ul li{
     cursor: pointer;
     position: relative;
-    transition: .8s ease;
+    transition: all ease 1s;
 }
 
 .nav-menu-content ul li:first-child{
