@@ -12,12 +12,20 @@
 .text,.my-tech{
     width: 50%;
     justify-content: flex-start;
+    transition: all ease 1.5s;
+}
+
+.slide-sideways{
+    opacity: 1 !important;
+    transform: translateX(0) !important;
 }
 
 .text{
     text-align: left;
     line-height: 28px;
     display: flex;
+    opacity: 0;
+    transform: translateX(-20%);
 }
 
 .text p span{
@@ -26,6 +34,8 @@
 
 .my-tech{
     margin-left: 30px;
+    opacity: 0;
+    transform: translateX(20%);
 }
 
 #abt-card-section{
