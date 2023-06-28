@@ -102,7 +102,7 @@ let IntroSection=()=>{
 
         const observer=new IntersectionObserver(([entry])=>{
             setisIntersecting(entry.isIntersecting);
-        }, {rootMargin:'-20px'});
+        }, {rootMargin:'0px'});
 
         observer.observe(document.getElementById('intro'));
 
