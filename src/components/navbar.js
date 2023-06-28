@@ -1,9 +1,8 @@
 import './navbar.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { goToSection } from '../utils/section';
 import {FaBars} from 'react-icons/fa';
 import { MdClose } from 'react-icons/md'
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 let MobileNav=()=>{
@@ -108,6 +107,34 @@ let LogoImage=()=>{
 
 let Navbar=()=>{
 
+    const [isIntersecting, setIsIntersecting]=useState(false)
+
+    useEffect(()=>{
+
+        const observer=new IntersectionObserver(([entry])=>{
+            setIsIntersecting(entry.isIntersecting)
+        }, {rootMargin:"0px"});
+
+        console.log(isIntersecting);
+
+        observer.observe(document.getElementById('desktop-nav'));
+
+        return()=>{
+            observer.disconnect();
+        }
+
+    },[isIntersecting]);
+
+    useEffect(()=>{
+        if(isIntersecting){
+            let navbar=document.getElementById('desktop-nav');
+
+            navbar.querySelectorAll('li').forEach(list=>{
+                list.classList.add('slide-down')
+            })
+        }
+    },[isIntersecting])
+
     const gotToAbout=()=>{
         goToSection('about-me')
     }
@@ -127,7 +154,7 @@ let Navbar=()=>{
     return(
 
         <React.Fragment>
-            <nav className='main-navbar'>
+            <nav className='main-navbar' id='desktop-nav'>
                     <Link className='logo' to={`/`}>
                         <LogoImage/><p><span>O</span><span>W</span><span>.</span> </p>
                     </Link>
