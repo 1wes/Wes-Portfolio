@@ -103,6 +103,32 @@ let ServicesSection=()=>{
     let [clients, setClients]=useState(0);
     let [status, setStatus]=useState(false);
     let intervalId=useRef();
+    const [isIntersecting, setIsIntersecting]=useState(false)
+
+    useEffect(()=>{
+
+        const observer=new IntersectionObserver(([entry])=>{
+            setIsIntersecting(entry.isIntersecting)
+        }, {rootMargin:"-120px"});
+
+        observer.observe(document.getElementById('my-services'));
+        console.log(isIntersecting)
+
+        return()=>{
+            observer.disconnect();
+        }
+
+    },[isIntersecting]);
+
+    useEffect(()=>{
+        if(isIntersecting){
+            let navbar=document.getElementById('my-services');
+
+            navbar.querySelectorAll('div').forEach(list=>{
+                list.classList.add('slide-up')
+            })
+        }
+    },[isIntersecting])
 
     useEffect(()=>{
 
