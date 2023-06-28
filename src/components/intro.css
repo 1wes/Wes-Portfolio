@@ -17,6 +17,7 @@
     height: 100%;
     align-items: center;
     opacity: 0;
+    transform: translateY(10%);
     transition: all ease 1s;
 }
 
@@ -132,7 +133,7 @@
     font-size: 15px;
     transform: translateX(-50%);
     opacity: 0;
-    transition: all ease .6s;
+    transition: all ease 1s;
 }
 
 .cta-btn button:hover{
