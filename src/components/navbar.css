@@ -99,7 +99,32 @@ nav div:nth-child(2) ul li::after{
 .nav-menu-content ul li{
     cursor: pointer;
     position: relative;
-    transition: .1s ease;
+    transition: .8s ease;
+}
+
+.nav-menu-content ul li:first-child{
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.nav-menu-content ul li:nth-child(2){
+    opacity: 0;
+    transform: translateY(-120%);
+}
+
+.nav-menu-content ul li:nth-child(3){
+    opacity: 0;
+    transform: translateY(-140%);
+}
+
+.nav-menu-content ul li:last-child{
+    opacity: 0;
+    transform: translateY(-160%);
+}
+
+.slide-down{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 .nav-menu-content ul li:hover{
