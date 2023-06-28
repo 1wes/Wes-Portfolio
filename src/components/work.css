@@ -15,6 +15,9 @@
 
 .company-list{
     width: 20%;
+    opacity: 0;
+    transition: all ease 1.5s;
+    transform: translateX(-50%);
 }
 
 .company-list ul{
@@ -54,6 +57,9 @@
     width: 80%;
     margin-left: 30px;
     text-align: left;
+    opacity: 0;
+    transform: translateX(20%);
+    transition: all ease 1.5s;
 }
 
 .company-wrapper{
