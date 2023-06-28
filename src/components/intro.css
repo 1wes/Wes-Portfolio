@@ -16,6 +16,9 @@
     margin: 0 auto;
     height: 100%;
     align-items: center;
+    opacity: 0;
+    transform: translateY(0);
+    transition: all ease 1s;
 }
 
 .intro{
@@ -26,7 +29,7 @@
     margin: 0 !important;
     transform: translateY(50%);
     opacity: 0;
-    transition: all ease .6s;
+    transition: all ease .8s;
 }
 
 .slide-up{

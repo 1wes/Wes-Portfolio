@@ -121,6 +121,10 @@ let IntroSection=()=>{
                 paragraph.classList.add("slide-up");
             })
 
+            introSection.querySelectorAll('div').forEach(element=>{
+                element.classList.add("slide-up");
+            })
+
             introSection.querySelectorAll('button').forEach(button=>{
                 button.classList.add("slide-up");
             })
