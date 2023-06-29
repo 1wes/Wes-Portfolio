@@ -22,7 +22,6 @@
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 20px;
 }
 
 .portfolio-card{
@@ -92,10 +91,6 @@
         flex-direction: column;
     }
 
-    .card-row:not(:first-child){
-        margin-top: 30px;
-    }
-
     .project-image{
         width: 100%;
     }
@@ -105,14 +100,8 @@
         text-align: center;
         margin-left: 0 !important;
         margin-top: 0 !important;
-        padding: 10px 0;
+        padding:0 !important;
     } 
-
-    .project
-
-    #projects-section-card{
-        padding-bottom: 20px;
-    }
 
     #projects-section-card:first-child{
         margin-top: 10px;
