@@ -122,6 +122,9 @@
 
 .cta-btn{
     margin-top: 40px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all ease 1s;
 }
 
 .cta-btn button{
@@ -131,9 +134,7 @@
     font-weight: bold;  
     background: none;
     font-size: 15px;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: all ease 1s;
+
 }
 
 .cta-btn button:hover{
