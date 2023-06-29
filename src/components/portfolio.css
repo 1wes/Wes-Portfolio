@@ -103,6 +103,11 @@
         padding:10px 0;
     } 
 
+    .project-description{
+        text-align: left;
+        padding: 2px;
+    }
+
     #projects-section-card:first-child{
         margin-top: 10px;
     }
