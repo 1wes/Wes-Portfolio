@@ -29,7 +29,7 @@ let Footer=()=>{
             let footer=document.getElementById('app-footer');
 
             footer.querySelectorAll('div').forEach(element=>{
-                element.classList.add('slide-sideways')
+                element.classList.add('slide-up')
             })
         }
     },[isIntersecting])
