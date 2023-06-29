@@ -125,9 +125,22 @@ let ServicesSection=()=>{
 
             navbar.querySelectorAll('div').forEach(list=>{
                 list.classList.add('slide-up')
-            })
+            });
+
+
+            setStatus(true);
+        }else{
+            setStatus(false);
+
+            clearInterval(intervalId.current);
+    
+            setYears(0);
+            setProjects(0);
+            setCustomers(0);
+            setClients(0);
         }
-    },[isIntersecting])
+
+    },[isIntersecting]);
 
     useEffect(()=>{
 
@@ -175,28 +188,11 @@ let ServicesSection=()=>{
         }
 
     },[status, years, customers, projects, clients]);
-    
-    const changeStatus=()=>{
-
-        setStatus(true);
-    }
-
-    const stopCounter=()=>{
-
-        setStatus(false);
-
-        clearInterval(intervalId.current);
-
-        setYears(0);
-        setProjects(0);
-        setCustomers(0);
-        setClients(0);
-    }
 
     return(
 
         <React.Fragment>
-            <div className='services-section' onMouseEnter={changeStatus} onMouseLeave={stopCounter} id='my-services'>
+            <div className='services-section' id='my-services'>
                 <div className='services-content'>
                     <ServicesDescription/>
                     <CardSection>
@@ -205,7 +201,7 @@ let ServicesSection=()=>{
                         <GenericCard icon={<FaDesktop/>} title={`Desktop Applications`} number={2} />
                         <GenericCard icon={<BsGraphUpArrow/>} title={`S.E.O`} number={1} />
                     </CardSection>
-                    <Analytics changeStatus={changeStatus} stopCounter={stopCounter}>
+                    <Analytics>
                         <Numbers number={years} description={`Years of Experience`} />
                         <Numbers number={customers} description={`Satisfied Customers`} />
                         <Numbers number={projects} description={`Projects Completed`} />
