@@ -124,7 +124,7 @@
     margin-top: 40px;
     transform: translateX(-50%);
     opacity: 0;
-    transition: all ease 1s;
+    transition: all ease 1.5s;
 }
 
 .cta-btn button{

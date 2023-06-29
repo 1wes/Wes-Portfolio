@@ -8,6 +8,9 @@
 
 .footer-content{
     width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all ease 1.5s;
 }
 
 .footer-image{
