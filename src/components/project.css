@@ -11,6 +11,9 @@
     font-weight: 750;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 10px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all ease 1.5s;
 }
 
 .cs-image, .cs-summary{
@@ -34,10 +37,19 @@
     transform: scale(1.5);
 }
 
+.cs-image{
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all ease 1.5s;
+}
+
 .cs-summary{
     margin-left:30px;
     border-radius: 2px;
     height: 100%;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all ease 1.5s;
 }
 
 .overview{

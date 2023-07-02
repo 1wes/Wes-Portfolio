@@ -60,6 +60,33 @@ let Project=()=>{
 
     const[project, setProject]=useState(null);
 
+    const [isIntersecting, setIsIntersecting]=useState(false)
+
+    useEffect(()=>{
+
+        const observer=new IntersectionObserver(([entry])=>{
+            setIsIntersecting(entry.isIntersecting)
+        }, {rootMargin:"-120px"});
+
+        observer.observe(document.getElementById('case-study'));
+        console.log(isIntersecting)
+
+        return()=>{
+            observer.disconnect();
+        }
+
+    },[isIntersecting]);
+
+    useEffect(()=>{
+        if(isIntersecting){
+            let caseStudy=document.getElementById('case-study');
+
+            caseStudy.querySelectorAll('div').forEach(element=>{
+                element.classList.add('slide-sideways')
+            })
+        }
+    },[isIntersecting])
+
     useEffect(()=>{
 
         axios.get(`https://mail-projectsapi.onrender.com/project/${id}`).then(res=>{
@@ -79,7 +106,7 @@ let Project=()=>{
             <Navbar/>
             <MobileNav/>
 
-            <div className="project-section">
+            <div className="project-section" id='case-study'>
                 <div className="project-content">
                     {
 
