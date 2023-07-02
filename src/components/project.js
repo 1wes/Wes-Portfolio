@@ -9,6 +9,36 @@ import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { MobileNav } from "./navbar";
 
+const PlaceHolder=()=>{
+
+    return(
+        <React.Fragment>
+            <div className="casestudy-placeholder">
+                <div className="placeholder-title">
+                    <div className="p-wrapper">
+                        <div className="p-content">
+                        </div>
+                    </div>
+                </div>
+                <div className="placeholder-content">
+                    <div className="placeholder-image">
+                        <div className="p-wrapper">
+                            <div className="p-content">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="placeholder-text">
+                        <div className="p-wrapper">
+                            <div className="p-content">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </React.Fragment>
+    )
+}
 
 let ProjectDetails=({children, title, src, overview, codebase, site, header})=>{
 
@@ -49,7 +79,6 @@ let ProjectDetails=({children, title, src, overview, codebase, site, header})=>{
     )
 }
 
-
 let Project=()=>{
 
     const pathname=useLocation().pathname;
@@ -59,8 +88,7 @@ let Project=()=>{
     const id=urlParam[2];
 
     const[project, setProject]=useState(null);
-
-    const [isIntersecting, setIsIntersecting]=useState(false)
+    const [isIntersecting, setIsIntersecting]=useState(false);
 
     useEffect(()=>{
 
@@ -110,7 +138,7 @@ let Project=()=>{
                 <div className="project-content">
                     {
 
-                        project!==null?<ProjectDetails header={project.name} title={project.name} overview={project.caseStudy} codebase={project.codebase} site={project.livelink} src={require(`../${project.casestudyImg}`)}>
+                        project==null?<PlaceHolder/>:<ProjectDetails header={project.name} title={project.name} overview={project.caseStudy} codebase={project.codebase} site={project.livelink} src={require(`../${project.casestudyImg}`)}>
                         {                            
                             project.techstack.map(language=>{
 
@@ -121,7 +149,7 @@ let Project=()=>{
                                 )
                             })
                         }
-                    </ProjectDetails>:console.log("No project found")
+                    </ProjectDetails>
                     }
                 </div>
             </div>
@@ -129,4 +157,4 @@ let Project=()=>{
         </React.Fragment>
     )
 }
-export default Project
+export default Project;
