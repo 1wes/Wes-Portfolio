@@ -1,11 +1,12 @@
-.case-study-wrapper, .page-header, .casestudy-placeholder{
+.case-study-wrapper, .page-header{
     display: flex;
     margin: 0 auto;
     width: 70%;
 }
 
-.casestudy-placeholder{
+/* .casestudy-placeholder{
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .placeholder-content{
@@ -20,16 +21,16 @@
 }
 
 .placeholder-image{
-    height: 50vh;
+    height: 40vh;
 }
 
 .placeholder-text{
-    height: 100vh;
+    height: 70vh;
 }
 
 .placeholder-title{
     margin-top: 70px;
-    height: 40px;
+    height: 20px;
 }
 
 .p-wrapper{
@@ -61,7 +62,7 @@
     100%{
         left: 79%;
     }
-}
+} */
 
 .page-header{
     margin-top: 70px;
