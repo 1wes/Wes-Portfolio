@@ -143,8 +143,8 @@ let Project=()=>{
                             project.techstack.map(language=>{
 
                                 return (
-                                    <div>
-                                        {language}
+                                    <div key={language.id}>
+                                        {language.name}
                                     </div>
                                 )
                             })
