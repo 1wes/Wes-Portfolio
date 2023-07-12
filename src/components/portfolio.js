@@ -4,6 +4,7 @@ import { CardSection } from "./services";
 import { Link } from "react-router-dom";
 import axios from "../baseurl";
 import { SectionHeader } from "./services";
+import useSWR from "swr";
 
 let PortfolioDescription=()=>{
 
@@ -61,9 +62,14 @@ let PortfolioCards=({title, src, description, caseStudyLink})=>{
 
 let Portfolio=()=>{
 
-    const [projects, setProjects]=useState([]);
-    const [isIntersecting, setIsIntersecting]=useState(false)
+    const [isIntersecting, setIsIntersecting]=useState(false);
 
+    const fetcher=url=>axios.get(url).then(res=>res.data);
+
+    const {data, error, isLoading}=useSWR(`https://mail-projectsapi.onrender.com/projects`, fetcher, {refreshInterval:10000});
+
+    const projects=data;
+    
     useEffect(()=>{
 
         const observer=new IntersectionObserver(([entry])=>{
@@ -86,19 +92,7 @@ let Portfolio=()=>{
                 list.classList.add('slide-sideways')
             })
         }
-    },[isIntersecting])
-
-
-    useEffect(()=>{
-
-        axios.get('https://mail-projectsapi.onrender.com/projects').then(res=>{
-
-            setProjects(res.data);
-
-            }).catch(err=>{
-            console.log(err)
-        })
-    },[])
+    },[isIntersecting]);
 
     return(
         <React.Fragment>
@@ -107,7 +101,7 @@ let Portfolio=()=>{
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
                         {
-                            projects.map((project)=>{
+                            projects && projects.map((project)=>{
                                 return(
                                     <CardRow id='projects-section-card' key={project.id}>
                                         <PortfolioCards title={project.name} description={project.description}

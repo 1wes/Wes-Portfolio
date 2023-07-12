@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { MobileNav } from "./navbar";
+import useSWR from "swr";
 
 // const PlaceHolder=()=>{
 
@@ -87,8 +88,13 @@ let Project=()=>{
 
     const id=urlParam[2];
 
-    const[project, setProject]=useState(null);
     const [isIntersecting, setIsIntersecting]=useState(false);
+
+    const fetcher=url=>axios.get(url).then(res=>res.data);
+
+    const{error, isLoading, data}=useSWR(`https://mail-projectsapi.onrender.com/project/${id}`, fetcher);
+
+    const project=data;
 
     useEffect(()=>{
 
@@ -97,7 +103,6 @@ let Project=()=>{
         }, {rootMargin:"-120px"});
 
         observer.observe(document.getElementById('case-study'));
-        console.log(isIntersecting)
 
         return()=>{
             observer.disconnect();
@@ -115,20 +120,6 @@ let Project=()=>{
         }
     },[isIntersecting])
 
-    useEffect(()=>{
-
-        axios.get(`https://mail-projectsapi.onrender.com/project/${id}`).then(res=>{
-
-            const newProject=res.data;
-
-                setProject(newProject);
-
-            }).catch(err=>{
-                console.log(err);
-        })
-
-    },[id]);
-
     return(
         <React.Fragment>
             <Navbar/>
@@ -138,7 +129,8 @@ let Project=()=>{
                 <div className="project-content">
                     {
 
-                        project!==null?<ProjectDetails header={project.name} title={project.name} overview={project.caseStudy} codebase={project.codebase} site={project.livelink} src={require(`../${project.casestudyImg}`)}>
+                        project && <ProjectDetails header={project.name} title={project.name} overview={project.caseStudy} codebase={project.codebase}
+                         site={project.livelink} src={require(`../${project.casestudyImg}`)}>
                         {                            
                             project.techstack.map(language=>{
 
@@ -149,7 +141,7 @@ let Project=()=>{
                                 )
                             })
                         }
-                    </ProjectDetails>:console.log("Project not yet loaded")
+                    </ProjectDetails>
                     }
                 </div>
             </div>
