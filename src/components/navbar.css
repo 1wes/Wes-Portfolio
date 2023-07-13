@@ -195,18 +195,18 @@ nav div:nth-child(2) ul li::after{
     .dropdown-menu{
         position: absolute;
         right: 0;
-        z-index: 100000;
-        width:60%;
+        z-index: 100;
+        width:0%;
         box-shadow: rgba(0, 0, 0, 0.205) 0px 7px 7px 0px;
         top: 0;
+        overflow-x: hidden;
         margin-top: 75px;
-        display: none;
-        transition: 1s ease-in-out;
-        background-color: rgb(46,46,53);;
+        transition: all ease 1s;
+        background-color: rgb(46,46,53);
     }
 
     .show-menu{
-        display: block;
+        width: 60%;
     }
 
     .dropdown-content ul{
