@@ -6,6 +6,8 @@ import axios from "../baseurl";
 import { SectionHeader } from "./services";
 import useSWR from "swr";
 
+const fetcher=url=>axios.get(url).then(res=>res.data);
+
 let PortfolioDescription=()=>{
 
     const header=`MY PORTFOLIO`;
@@ -64,8 +66,6 @@ let Portfolio=()=>{
 
     const [isIntersecting, setIsIntersecting]=useState(false);
 
-    const fetcher=url=>axios.get(url).then(res=>res.data);
-
     const {data, error, isLoading}=useSWR(`https://mail-projectsapi.onrender.com/projects`, fetcher, {refreshInterval:10000});
 
     const projects=data;
@@ -101,7 +101,7 @@ let Portfolio=()=>{
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
                         {
-                            projects && projects.map((project)=>{
+                            isLoading?<CardRow>Loading...</CardRow>:projects.map((project)=>{
                                 return(
                                     <CardRow id='projects-section-card' key={project.id}>
                                         <PortfolioCards title={project.name} description={project.description}
