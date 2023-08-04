@@ -130,16 +130,11 @@ h3{
         flex-direction: column;
     }
 
+    .tech{
+        gap: 20px;
+    }
+
     .cs-image img{
         filter: grayscale(0);
-    }
-
-    .tech{
-        flex-direction: column;
-    }
-
-    .tech div:not(:last-child){
-        padding:0 !important;
-        border: none;
     }
 }
