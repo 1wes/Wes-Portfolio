@@ -16,7 +16,6 @@ let Footer=()=>{
         }, {rootMargin:"0px"});
 
         observer.observe(document.getElementById('app-footer'));
-        console.log(isIntersecting)
 
         return()=>{
             observer.disconnect();
