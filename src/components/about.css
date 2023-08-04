@@ -66,11 +66,11 @@
     align-items: center;
     justify-content: center;
     color: var(--accent-color);
-    transform: all .1s ease-in-out;
+    transition: all ease .1s;
 }
 
 .tech-name:hover{
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
 }
 
 @media only screen and (max-width:480px){
