@@ -1,6 +1,7 @@
 {
   "name": "wes-portfolio",
   "version": "0.1.0",
+  "type":"module",
   "private": true,
   "proxy": "https://mail-projectsapi.onrender.com/",
   "dependencies": {
@@ -30,7 +31,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "eslintConfig": {
     "extends": [
