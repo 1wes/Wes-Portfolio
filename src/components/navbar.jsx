@@ -4,6 +4,7 @@ import { goToSection } from '../utils/section';
 import {FaBars} from 'react-icons/fa';
 import { MdClose } from 'react-icons/md'
 import { Link } from 'react-router-dom';
+import wesCartoon from '../assets/wesCartoon.png'
 
 let MobileNav=()=>{
 
@@ -99,7 +100,7 @@ let LogoImage=()=>{
     return(
         <React.Fragment>
             <div className='image'>
-                <img src={require('../wesCartoon.png')} alt='logo' />
+                <img src={wesCartoon} alt='logo' />
             </div>
         </React.Fragment>
     )
