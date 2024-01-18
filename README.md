@@ -31,7 +31,7 @@ npm install
 ### Once all the necessary dependancies are installed, start the app using the following command:
 
 ```
-npm start
+npm run dev
 ```
 
 ### This command will start the development server
@@ -40,6 +40,6 @@ npm start
 
 ```
 
-localhost:3000
+localhost:5173
 ```
 
