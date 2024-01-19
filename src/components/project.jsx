@@ -10,37 +10,6 @@ import { FaGithub } from "react-icons/fa";
 import { MobileNav } from "./navbar";
 import useSWR from "swr";
 
-// const PlaceHolder=()=>{
-
-//     return(
-//         <React.Fragment>
-//             <div className="casestudy-placeholder">
-//                 <div className="placeholder-title">
-//                     <div className="p-wrapper">
-//                         <div className="p-content">
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div className="placeholder-content">
-//                     <div className="placeholder-image">
-//                         <div className="p-wrapper">
-//                             <div className="p-content">
-//                             </div>
-//                         </div>
-//                     </div>
-//                     <div className="placeholder-text">
-//                         <div className="p-wrapper">
-//                             <div className="p-content">
-//                             </div>
-//                         </div>
-//                     </div>
-
-//                 </div>
-//             </div>
-//         </React.Fragment>
-//     )
-// }
-
 let ProjectDetails=({children, title, src, overview, codebase, site, header})=>{
 
     return(
