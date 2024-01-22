@@ -3,8 +3,8 @@ import './contact.css';
 import { CardSection } from "./services";
 import { CardRow } from "./portfolio";
 import { Link } from "react-router-dom";
-import { BsTelephoneFill, BsCheck2Circle } from "react-icons/bs";
-import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { BsTelephoneFill, BsCheck2Circle, BsTwitterX } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa";
 import { GoChevronUp } from "react-icons/go";
 import { SectionHeader } from "./services";
 import axios from '../baseurl';
@@ -214,7 +214,7 @@ let Contact=()=>{
                     <CardSection id={`contact-card-section`}>
                         <CardRow id={`contact-section-card-row`}>
                             <ContactCard contactIcon={<BsTelephoneFill/>} contact={`tel:+254 7 03 239124`} address={`+254 7 03 239124`} />
-                            <ContactCard contactIcon={<FaTwitter/>} contact={`https://twitter.com/okemwa_wes`} address={`@okemwa_wes`} />
+                            <ContactCard contactIcon={<BsTwitterX/>} contact={`https://twitter.com/okemwa_wes`} address={`@okemwa_wes`} />
                             <ContactCard contactIcon={<FaLinkedinIn/>} contact={`https://www.linkedin.com/in/okemwa-wes/`} address={`okemwa-wesley`} />
                         </CardRow>
                     </CardSection>

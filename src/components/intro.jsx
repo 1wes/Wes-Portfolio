@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import './intro.css';
 import { Link } from "react-router-dom";
 import { goToSection } from "../utils/section";
-import {FaGithub, FaLinkedin, FaTwitter, FaInstagramSquare} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagramSquare } from 'react-icons/fa';
+import { BsTwitterX } from "react-icons/bs";
 
 let Socials=()=>{
 
@@ -27,7 +28,7 @@ let Socials=()=>{
                 <li>
                     <Link to={`https://twitter.com/okemwa_wes`} target='blank'>
                         <i>
-                            <FaTwitter/>
+                            <BsTwitterX/>
                         </i>
                     </Link>
                 </li>
