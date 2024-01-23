@@ -101,11 +101,11 @@ let Portfolio=()=>{
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
                         {
-                            isLoading?<CardRow>Loading...</CardRow>:projects.map((project)=>{
+                            isLoading ? <CardRow>Loading...</CardRow> : projects.map((project) => {                              
                                 return(
                                     <CardRow id='projects-section-card' key={project.id}>
                                         <PortfolioCards title={project.name} description={project.description}
-                                         src={`../../src/assets/${project.casestudyImg}`} caseStudyLink={`/project/${project.id}`} />
+                                         src={import(`../src/assets/${project.casestudyImg}`)} caseStudyLink={`/project/${project.id}`} />
                                     </CardRow>
                                 )
                             })
