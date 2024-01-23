@@ -105,7 +105,7 @@ let Portfolio=()=>{
                                 return(
                                     <CardRow id='projects-section-card' key={project.id}>
                                         <PortfolioCards title={project.name} description={project.description}
-                                         src={` ./src/assets/${project.casestudyImg}`} caseStudyLink={`/project/${project.id}`} />
+                                         src={`../../src/assets/${project.casestudyImg}`} caseStudyLink={`/project/${project.id}`} />
                                     </CardRow>
                                 )
                             })
