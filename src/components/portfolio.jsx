@@ -101,7 +101,7 @@ let Portfolio=()=>{
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
                         {
-                            isLoading ? <CardRow>Loading...</CardRow> : projects.map((project) => {                              
+                            isLoading ? <CardRow id='projects-loader'>Loading Projects...</CardRow> : projects.map((project) => {                              
                                 return(
                                     <CardRow id='projects-section-card' key={project.id}>
                                         <PortfolioCards title={project.name} description={project.description}
