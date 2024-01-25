@@ -73,7 +73,7 @@ const DynamicImage=({project})=>{
         const importImage = async () => {
             
             try {
-                const { default: imageModule } = await import(`../assets/${project.casestudyImg}`);
+                const { default: imageModule } = await import(`../../src/assets/${project.casestudyImg}`);
 
                 if (isMounted) {
                     setImageSrc(imageModule);
