@@ -62,6 +62,43 @@ let PortfolioCards=({title, src, description, caseStudyLink})=>{
     )
 }
 
+const DynamicImage=({project})=>{
+
+    const [imageSrc, setImageSrc]=useState(null);
+
+    useEffect(() => {
+        
+        let isMounted = true;
+
+        const importImage = async () => {
+            
+            try {
+                const { default: imageModule } = await import(`../assets/${project.casestudyImg}`);
+
+                if (isMounted) {
+                    setImageSrc(imageModule);
+                }
+            } catch (error) {
+                
+                console.log("Error loading image:", error);
+            }
+        }
+
+        importImage();
+
+        return () => {
+            isMounted = false;
+        }
+    }, [project.casestudyImg]);
+
+    return (
+        <CardRow>
+            <PortfolioCards title={project.name} description={project.description} src={imageSrc} caseStudyLink={`/project/${project.id}`} />
+        </CardRow>
+    )
+}
+
+
 let Portfolio=()=>{
 
     const [isIntersecting, setIsIntersecting]=useState(false);
@@ -101,14 +138,19 @@ let Portfolio=()=>{
                     <PortfolioDescription/>
                     <CardSection id={`portfolio-card-section`}>
                         {
-                            isLoading ? <CardRow id='projects-loader'>Loading Projects...</CardRow> : projects.map((project) => {                              
-                                return(
-                                    <CardRow id='projects-section-card' key={project.id}>
-                                        <PortfolioCards title={project.name} description={project.description}
-                                         src={`../src/assets/${project.casestudyImg}`} caseStudyLink={`/project/${project.id}`} />
-                                    </CardRow>
+                            isLoading ? <CardRow id='projects-loader'>Loading Projects...</CardRow> : projects.map((project) =>
+                            (
+                                <DynamicImage key={project.id} project={project} />
                                 )
-                            })
+                            // {                              
+                            //     return(
+                            //         <CardRow id='projects-section-card' key={project.id}>
+                            //             <PortfolioCards title={project.name} description={project.description}
+                            //              src={`../src/assets/${project.casestudyImg}`} caseStudyLink={`/project/${project.id}`} />
+                            //         </CardRow>
+                            //     )
+                            // }
+                            )
                         }
                     </CardSection>
                 </div>
