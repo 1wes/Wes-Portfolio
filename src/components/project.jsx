@@ -49,6 +49,48 @@ let ProjectDetails=({children, title, src, overview, codebase, site, header})=>{
     )
 }
 
+const DynamicImage = ({project, children}) => {
+
+    const [imageUrl, setImageUrl] = useState(null);
+    
+    useEffect(() => {
+        
+        let isMounted = true;
+
+        const importCaseStudyImage = async () => {
+            
+            try {
+                
+                const { default: imageModule } = await import(`../../src/assets/${project.casestudyImg}.png`);
+
+                if (isMounted) {
+                    setImageUrl(imageModule);
+                }
+                
+            } catch (error) {
+                
+                console.log("Error dynamically importing image", error);
+            }
+        }
+
+        importCaseStudyImage();
+
+        return () => {
+            isMounted = false;
+        }
+
+    }, [project.casestudyImg]);
+
+    return (
+        <React.Fragment>
+            <ProjectDetails header={project.name} title={project.name} overview={project.caseStudy} codebase={project.codebase}
+                site={project.livelink} src={imageUrl}>
+                {children}
+            </ProjectDetails>
+        </React.Fragment>
+    )
+}
+
 let Project=()=>{
 
     const pathname=useLocation().pathname;
@@ -98,8 +140,8 @@ let Project=()=>{
                 <div className="project-content">
                     {
 
-                        project && <ProjectDetails header={project.name} title={project.name} overview={project.caseStudy} codebase={project.codebase}
-                         site={project.livelink} src={`../../src/assets/${project.casestudyImg}.png`}>
+                        project && <DynamicImage project={project} 
+                         >
                         {                            
                             project.techstack.map(language=>{
 
@@ -110,7 +152,7 @@ let Project=()=>{
                                 )
                             })
                         }
-                    </ProjectDetails>
+                    </DynamicImage>
                     }
                 </div>
             </div>
