@@ -99,7 +99,7 @@ let Project=()=>{
                     {
 
                         project && <ProjectDetails header={project.name} title={project.name} overview={project.caseStudy} codebase={project.codebase}
-                         site={project.livelink} src={require(`../${project.casestudyImg}`)}>
+                         site={project.livelink} src={`../../src/assets/${project.casestudyImg}.png`}>
                         {                            
                             project.techstack.map(language=>{
 
