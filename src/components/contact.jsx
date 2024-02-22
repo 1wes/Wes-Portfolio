@@ -56,17 +56,17 @@ let GoUp=({onClick})=>{
     )
 }
 
-let ContactForm=({onSubmit, onNameChange, onEmailChange, onMessageChange, name, email, message})=>{
+let ContactForm=({onSubmit, onSubjectChange, onEmailChange, onMessageChange, subject, email, message})=>{
 
     return(
         <React.Fragment>
             <div className="contact-form-section">
                 <form className="contact-form" onSubmit={onSubmit}>
                     <label className="form-label">
-                        Name
+                        Subject
                     </label>
                     <div className="input-field">
-                        <input type="text" placeholder="Enter your name" value={name} onChange={e=>{onNameChange(e.target.value)}} required />
+                        <input type="text" placeholder="Enter your subject" value={subject} onChange={e=>{onSubjectChange(e.target.value)}} required />
                     </div>
                     
                     <label className="form-label">
@@ -134,7 +134,7 @@ const boxSstyle = {
 
 let Contact=()=>{
 
-    const [name, setName]=useState('');
+    const [subject, setSubject]=useState('');
     const [email, setEmail]=useState('');
     const [message, setMessage]=useState('');
     const [open, setOpen]=useState(false);
@@ -168,8 +168,8 @@ let Contact=()=>{
         window.scrollTo({top:0, left:0, behavior:"smooth"});
     }
 
-    const handleNameChange=(name=>{
-        setName(name);
+    const handleSubjectChange=(subject=>{
+        setSubject(subject);
     });
 
     const handleEmailChange=(email=>{
@@ -185,7 +185,7 @@ let Contact=()=>{
         e.preventDefault();
 
         let formData={
-            sender:name,
+            subject:subject,
             email:email,
             message:message
         }
@@ -208,8 +208,8 @@ let Contact=()=>{
             <div className="contact-section" id="contact-me">
                 <div className="contact-content">
                     <ContactDescription/>
-                    <ContactForm onSubmit={submitForm} onNameChange={handleNameChange} onEmailChange={handleEmailChange} 
-                    onMessageChange={handleMessageChange} name={name} email={email} message={message} />
+                    <ContactForm onSubmit={submitForm} onSubjectChange={handleSubjectChange} onEmailChange={handleEmailChange} 
+                    onMessageChange={handleMessageChange} subject={subject} email={email} message={message} />
                     <Divider role='presentation' className="contact-divider" >OR</Divider>
                     <CardSection id={`contact-card-section`}>
                         <CardRow id={`contact-section-card-row`}>
