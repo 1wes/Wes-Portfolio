@@ -3,19 +3,14 @@
   "name": "Wes-Portfolio",
   "icons": [
     {
-      "src": "wesLogo.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "wesLogo.png",
+      "src": "android-chrome-384x384.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "wesLogo.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "384x384"
     }
   ],
   "start_url": ".",
